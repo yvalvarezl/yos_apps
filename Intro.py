@@ -109,8 +109,8 @@ with col1:
         img = cargar_imagen('OIG8.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Interfaz inicial y bienvenida interactiva del portafolio de aplicaciones.")
-        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+        st.write("Prototipo base de interfaz multimodal con prueba de widgets interactivos, columnas y entradas de texto en Streamlit.")
+        st.link_button("Probar App ↗", "https://4gzh5pcun8wvb4uwagf3pb.streamlit.app/")
 
 with col2:
     with st.container(border=True):
