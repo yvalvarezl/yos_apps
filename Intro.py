@@ -1,87 +1,137 @@
 import streamlit as st
 from PIL import Image
-st.title("Aplicaciones de Inteligencia Artificial.")
+import os
 
+# 1. Configuración general de la página
+st.set_page_config(
+    page_title="Portafolio | Yoselin Álvarez",
+    page_icon="🎨",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Estilo personalizado adicional para mejorar visualmente los botones y tarjetas
+st.markdown("""
+    <style>
+    .main .block-container { padding-top: 2rem; }
+    .stButton>button { width: 100%; border-radius: 8px; }
+    </style>
+""", unsafe_allow_html=True)
+
+# 2. Barra Lateral (Sidebar) - Identidad de Marca
 with st.sidebar:
-  st.subheader("Aplicaciones con Inteligencia Artificial.")
-  parrafo = (
-    "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-    "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-    "resulta en una mayor eficiencia y precisión en diversos campos."
-  )
-  st.write(parrafo)
+    st.title("🎨 Yoselin Álvarez")
+    st.caption("Diseñadora Interactiva & Desarrolladora")
+    
+    st.markdown("""
+    ¡Hola! 👋 Bienvenido a mi portafolio interactivo. Aquí exploro la intersección entre el **diseño de experiencia**, la **inteligencia artificial** y los **sistemas ciberfísicos**.
+    """)
+    
+    st.divider()
+    
+    st.subheader("📌 Contacto & Enlaces")
+    st.markdown("🐙 [GitHub](https://github.com/yvalvarezl)")
+    st.markdown("💼 [LinkedIn](https://linkedin.com)")  # Actualiza con tu perfil
+    st.markdown("🌐 [Recursos & Ejercicios](https://sites.google.com/view/aplicacionesdeia/inicio)")
+    
+    st.divider()
+    st.info("💡 **Tip:** Haz clic en los enlaces de cada tarjeta para probar los prototipos desplegados.")
 
-url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
-st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
-col1, col2, col3 = st.columns(3)
+# 3. Encabezado Principal
+st.title("⚡ Portafolio de Proyectos e Inteligencia Artificial")
+st.markdown("""
+Esta colección reúne aplicaciones web interactivas, modelos de visión por computador, procesamiento de lenguaje natural y prototipos ciberfísicos desarrollados con **Python**, **Streamlit** y modelos de vanguardia.
+""")
 
+st.divider()
+
+# Función auxiliar para cargar imágenes sin romper el layout si no existen
+def cargar_imagen(nombre_archivo):
+    if os.path.exists(nombre_archivo):
+        return Image.open(nombre_archivo)
+    return None
+
+# 4. Rejilla de Proyectos (3 Columnas)
+col1, col2, col3 = st.columns(3, gap="medium")
+
+# --- COLUMNA 1 ---
 with col1:
- 
- st.subheader("Conversión de texto a voz")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
- url = "https://imultimod.streamlit.app/"
- st.write(f"Texto a voz: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("🗣️ Texto a Voz")
+        img = cargar_imagen('txt_to_audio2.png')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Generador de voz sintetizada a partir de entrada de texto utilizando librerías multimodal.")
+        st.link_button("Probar App ↗", "https://imultimod.streamlit.app/")
 
- st.subheader("Reconocimiento de Objetos")
- image = Image.open('txt_to_audio.png')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://yolov5cmc.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("👁️ Detección de Objetos")
+        img = cargar_imagen('txt_to_audio.png')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Identificación y segmentación de objetos en tiempo real con arquitecturas YOLOv5.")
+        st.link_button("Probar App ↗", "https://yolov5cmc.streamlit.app/")
 
- st.subheader("Entrenando Modelos")
- image = Image.open('OIG5.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("🧠 Modelos Personalizados")
+        img = cargar_imagen('OIG5.jpg')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Implementación y despliegue de modelos de visión entrenados con conjuntos de datos propios.")
+        st.link_button("Probar App ↗", "https://yolov5cmc.streamlit.app/")
 
-with col2: 
- st.subheader("Conversión de voz a texto")
- image = Image.open('OIG8.jpg')
- st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
- url = "https://traductorw.streamlit.app/"
- st.write(f"Voz a texto: [Enlace]({url})")
+# --- COLUMNA 2 ---
+with col2:
+    with st.container(border=True):
+        st.subheader("🎙️ Voz a Texto")
+        img = cargar_imagen('audio_to_txt.png')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Transcripción y reconocimiento de voz continua convertida a caracteres de texto.")
+        st.link_button("Probar App ↗", "https://vvoztext.streamlit.app/")
 
- st.subheader("Análisis de Datos")
- image = Image.open('data_analisis.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
- url = "https://dataagente.streamlit.app/"
- st.write(f"Datos: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("📊 Análisis de Datos con Agentes")
+        img = cargar_imagen('data_analisis.png')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Exploración e interpretación automatizada de datasets mediante agentes inteligentes.")
+        st.link_button("Probar App ↗", "https://agenteanalisis.streamlit.app/")
 
- st.subheader("Trasnscriptor Audio y Video")
- image = Image.open('OIG3.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
- url = "https://transcript-whisper.streamlit.app/"
- st.write(f"Transcriptor: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("📝 Transcriptor Multimedia")
+        img = cargar_imagen('OIG2.jpg')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Procesamiento de archivos de audio y video para extracción e indexación de texto.")
+        st.link_button("Probar App ↗", "https://vtranscrip.streamlit.app/")
 
+# --- COLUMNA 3 ---
+with col3:
+    with st.container(border=True):
+        st.subheader("📚 RAG en Documentos (PDF)")
+        img = cargar_imagen('Chat_pdf.png')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Sistema de generación aumentada por recuperación para interactuar y consultar PDFs.")
+        st.link_button("Probar App ↗", "https://ragpdf.streamlit.app/")
 
-with col3: 
- st.subheader("Generación en Contexto")
- image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://chatpdf-cc.streamlit.app/"
- st.write(f"RAG: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("🔍 Análisis Visual con VLM")
+        img = cargar_imagen('OIG3.jpg')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Evaluación razonada e interpretación del contexto de imágenes mediante modelos de visión-lenguaje.")
+        st.link_button("Probar App ↗", "https://agente-vision.streamlit.app/")
 
- st.subheader("Análisis de Imagen")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
- 
- st.subheader("Sistema Ciberfísico")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("🌐 Sistema Ciberfísico")
+        img = cargar_imagen('OIG4.jpg')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Integración de sensores y actuadores con la nube para monitoreo e interacción en tiempo real.")
+        st.link_button("Probar App ↗", "https://ciberfisico.streamlit.app/")
 
-
+# 5. Pie de página
+st.divider()
+st.caption("Diseñado y desarrollado por Yoselin Álvarez © 2026 | Universidad EAFIT")
