@@ -10,58 +10,68 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado: Fondo rosa suave semitransparente con texto oscuro legibilidad alta
+# Estilo personalizado: Rosa tierno e intenso con alta legibilidad
 st.markdown("""
     <style>
-    /* 1. Barra superior limpia e integrada */
+    /* 1. Fondo de la barra superior */
     header[data-testid="stHeader"] {
-        background-color: rgba(255, 240, 243, 0.95) !important;
+        background-color: #FFD1DC !important;
     }
     
-    /* 2. Fondo principal (Rosita suave con transparencia) */
+    /* 2. Fondo principal de la app (Rosa tierno v%C3%ADvido) */
     .stApp {
-        background-color: rgba(255, 240, 243, 0.95);
+        background-color: #FFD1DC;
         color: #1A1A1A !important;
     }
     
-    /* 3. Fondo de la barra lateral (Rosa pastel suave semitransparente) */
+    /* 3. Fondo de la barra lateral (Rosa dulce) */
     [data-testid="stSidebar"] {
-        background-color: rgba(255, 228, 230, 0.95) !important;
+        background-color: #FFC0CB !important;
     }
 
-    /* 4. Color del texto principal y de la barra lateral */
+    /* 4. Texto general en negro/marr%C3%B3n oscuro bien n%C3%ADtido */
     .stApp p, .stApp span, .stApp label, [data-testid="stSidebar"] p, [data-testid="stSidebar"] span {
-        color: #1A1A1A !important;
+        color: #2B1B22 !important;
         font-weight: 500;
     }
     
-    /* 5. Tarjetas / Contenedores en blanco puro para destacar los proyectos */
+    /* 5. Tarjetas/Contenedores de proyectos en blanco con sombra y borde rosa fucsia */
     [data-testid="stVerticalBlockBorderWrapper"] > div {
         background-color: #FFFFFF !important;
-        border: 1px solid #FFB6C1 !important;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(255, 182, 193, 0.25);
+        border: 2px solid #FF69B4 !important;
+        border-radius: 16px;
+        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.25);
     }
     
-    /* 6. Botones en tono rosa con texto oscuro destacado */
+    /* 6. Botones rosados con texto oscuro y borde suave */
     .stButton>button, .stLinkButton>a {
         width: 100%;
-        border-radius: 8px;
+        border-radius: 10px;
         background-color: #FFB6C1 !important;
-        color: #1A1A1A !important;
-        border: none !important;
+        color: #2B1B22 !important;
+        border: 1px solid #FF69B4 !important;
         font-weight: bold !important;
     }
     
+    /* Efecto al pasar el cursor por los botones */
     .stButton>button:hover, .stLinkButton>a:hover {
-        background-color: #FF69B4 !important;
+        background-color: #FF1493 !important;
         color: #FFFFFF !important;
+        box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4);
     }
     
-    /* 7. Títulos principales y subtítulos */
+    /* 7. T%C3%ADtulos principales en Magenta/Fucsia dulce */
     h1, h2, h3 {
         color: #C71585 !important;
-        font-weight: 700 !important;
+        font-weight: 800 !important;
+    }
+    
+    /* Ajuste de cajas informativas (st.info) */
+    .stAlert {
+        background-color: #FFF0F5 !important;
+        border: 1px solid #FF69B4 !important;
+        color: #2B1B22 !important;
+        border-radius: 12px;
     }
     </style>
 """, unsafe_allow_html=True)
