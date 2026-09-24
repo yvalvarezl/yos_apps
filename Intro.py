@@ -10,46 +10,58 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado en paleta Rosa & Blanco
+# Estilo personalizado: Fondo rosa suave semitransparente con texto oscuro legibilidad alta
 st.markdown("""
     <style>
-    /* Fondo principal de la app */
+    /* 1. Barra superior limpia e integrada */
+    header[data-testid="stHeader"] {
+        background-color: rgba(255, 240, 243, 0.95) !important;
+    }
+    
+    /* 2. Fondo principal (Rosita suave con transparencia) */
     .stApp {
-        background-color: #FFF5F7;
-        color: #4A2E35;
+        background-color: rgba(255, 240, 243, 0.95);
+        color: #1A1A1A !important;
     }
     
-    /* Fondo de la barra lateral */
+    /* 3. Fondo de la barra lateral (Rosa pastel suave semitransparente) */
     [data-testid="stSidebar"] {
-        background-color: #FFE4E1;
+        background-color: rgba(255, 228, 230, 0.95) !important;
+    }
+
+    /* 4. Color del texto principal y de la barra lateral */
+    .stApp p, .stApp span, .stApp label, [data-testid="stSidebar"] p, [data-testid="stSidebar"] span {
+        color: #1A1A1A !important;
+        font-weight: 500;
     }
     
-    /* Estilo de las tarjetas / contenedores */
+    /* 5. Tarjetas / Contenedores en blanco puro para destacar los proyectos */
     [data-testid="stVerticalBlockBorderWrapper"] > div {
-        background-color: #FFFFFF;
+        background-color: #FFFFFF !important;
         border: 1px solid #FFB6C1 !important;
         border-radius: 12px;
-        box-shadow: 0 2px 6px rgba(255, 182, 193, 0.2);
+        box-shadow: 0 4px 10px rgba(255, 182, 193, 0.25);
     }
     
-    /* Botones principales */
+    /* 6. Botones en tono rosa con texto oscuro destacado */
     .stButton>button, .stLinkButton>a {
         width: 100%;
         border-radius: 8px;
         background-color: #FFB6C1 !important;
-        color: #4A2E35 !important;
+        color: #1A1A1A !important;
         border: none !important;
-        font-weight: bold;
+        font-weight: bold !important;
     }
     
     .stButton>button:hover, .stLinkButton>a:hover {
         background-color: #FF69B4 !important;
-        color: white !important;
+        color: #FFFFFF !important;
     }
     
-    /* Títulos y encabezados */
+    /* 7. Títulos principales y subtítulos */
     h1, h2, h3 {
-        color: #D87093 !important;
+        color: #C71585 !important;
+        font-weight: 700 !important;
     }
     </style>
 """, unsafe_allow_html=True)
