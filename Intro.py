@@ -21,18 +21,11 @@ st.markdown("""
 # 2. Barra Lateral (Sidebar) - Identidad de Marca
 with st.sidebar:
     st.title("🎨 Yoselin Álvarez")
-    st.caption("Diseñadora Interactiva & Desarrolladora")
+    st.caption("Diseñadora Interactiva")
     
     st.markdown("""
     ¡Hola! 👋 Bienvenido a mi portafolio interactivo. Aquí exploro la intersección entre el **diseño de experiencia**, la **inteligencia artificial** y los **sistemas ciberfísicos**.
     """)
-    
-    st.divider()
-    
-    st.subheader("📌 Contacto & Enlaces")
-    st.markdown("🐙 [GitHub](https://github.com/yvalvarezl)")
-    st.markdown("💼 [LinkedIn](https://linkedin.com)")  # Actualiza con tu perfil
-    st.markdown("🌐 [Recursos & Ejercicios](https://sites.google.com/view/aplicacionesdeia/inicio)")
     
     st.divider()
     st.info("💡 **Tip:** Haz clic en los enlaces de cada tarjeta para probar los prototipos desplegados.")
