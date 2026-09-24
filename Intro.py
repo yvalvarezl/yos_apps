@@ -109,7 +109,7 @@ with col1:
         img = cargar_imagen('OIG8.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Prototipo base de interfaz multimodal con prueba de widgets interactivos, columnas y entradas de texto en Streamlit.")
+        st.write("Prototipo base con prueba de widgets, columnas y entradas de texto.")
         st.link_button("Probar App ↗", "https://4gzh5pcun8wvb4uwagf3pb.streamlit.app/")
 
 with col2:
