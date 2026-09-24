@@ -18,24 +18,24 @@ st.markdown("""
         background-color: #FFD1DC !important;
     }
     
-    /* 2. Fondo principal de la app (Rosa tierno v%C3%ADvido) */
+    /* 2. Fondo principal de la app */
     .stApp {
         background-color: #FFD1DC;
         color: #1A1A1A !important;
     }
     
-    /* 3. Fondo de la barra lateral (Rosa dulce) */
+    /* 3. Fondo de la barra lateral */
     [data-testid="stSidebar"] {
         background-color: #FFC0CB !important;
     }
 
-    /* 4. Texto general en negro/marr%C3%B3n oscuro bien n%C3%ADtido */
+    /* 4. Texto general */
     .stApp p, .stApp span, .stApp label, [data-testid="stSidebar"] p, [data-testid="stSidebar"] span {
         color: #2B1B22 !important;
         font-weight: 500;
     }
     
-    /* 5. Tarjetas/Contenedores de proyectos en blanco con sombra y borde rosa fucsia */
+    /* 5. Tarjetas de proyectos */
     [data-testid="stVerticalBlockBorderWrapper"] > div {
         background-color: #FFFFFF !important;
         border: 2px solid #FF69B4 !important;
@@ -43,7 +43,7 @@ st.markdown("""
         box-shadow: 0 6px 14px rgba(255, 105, 180, 0.25);
     }
     
-    /* 6. Botones rosados con texto oscuro y borde suave */
+    /* 6. Botones */
     .stButton>button, .stLinkButton>a {
         width: 100%;
         border-radius: 10px;
@@ -53,20 +53,18 @@ st.markdown("""
         font-weight: bold !important;
     }
     
-    /* Efecto al pasar el cursor por los botones */
     .stButton>button:hover, .stLinkButton>a:hover {
         background-color: #FF1493 !important;
         color: #FFFFFF !important;
         box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4);
     }
     
-    /* 7. T%C3%ADtulos principales en Magenta/Fucsia dulce */
+    /* 7. Títulos */
     h1, h2, h3 {
         color: #C71585 !important;
         font-weight: 800 !important;
     }
     
-    /* Ajuste de cajas informativas (st.info) */
     .stAlert {
         background-color: #FFF0F5 !important;
         border: 1px solid #FF69B4 !important;
@@ -76,27 +74,25 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 2. Barra Lateral (Sidebar) - Identidad de Marca
+# 2. Barra Lateral (Sidebar)
 with st.sidebar:
     st.title("🎨 Yoselin Álvarez")
     st.caption("Diseñadora Interactiva")
-    
     st.markdown("""
-    ¡Hola! 👋 Bienvenido a mi portafolio interactivo. Aquí exploro la intersección entre el **diseño de experiencia**, la **inteligencia artificial** y los **sistemas ciberfísicos**.
+    ¡Hola! 👋 Bienvenido a mi portafolio interactivo. Aquí presento **10 aplicaciones interactivas** enfocadas en IA, procesamiento de texto, visión por computador y análisis de datos.
     """)
-    
     st.divider()
-    st.info("💡 **Tip:** Haz clic en los enlaces de cada tarjeta para probar los prototipos desplegados.")
+    st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar los prototipos.")
 
 # 3. Encabezado Principal
 st.title("⚡ Portafolio de Proyectos e Inteligencia Artificial")
 st.markdown("""
-Esta colección reúne aplicaciones web interactivas, modelos de visión por computador, procesamiento de lenguaje natural y prototipos ciberfísicos desarrollados con **Python**, **Streamlit** y modelos de vanguardia.
+Colección de 10 herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Inteligencia Artificial.
 """)
 
 st.divider()
 
-# Función auxiliar para cargar imágenes sin romper el layout si no existen
+# Función auxiliar para cargar imágenes
 def cargar_imagen(nombre_archivo):
     if os.path.exists(nombre_archivo):
         return Image.open(nombre_archivo)
@@ -108,80 +104,88 @@ col1, col2, col3 = st.columns(3, gap="medium")
 # --- COLUMNA 1 ---
 with col1:
     with st.container(border=True):
-        st.subheader("🗣️ Texto a Voz")
+        st.subheader("1. 🚀 Mi Primera App (Intro)")
+        img = cargar_imagen('OIG8.jpg')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Interfaz inicial y bienvenida interactiva del portafolio de aplicaciones.")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+    with st.container(border=True):
+        st.subheader("2. 🗣️ Texto a Audio")
         img = cargar_imagen('txt_to_audio2.png')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Generador de voz sintetizada a partir de entrada de texto utilizando librerías multimodal.")
+        st.write("Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.")
         st.link_button("Probar App ↗", "https://imultimod.streamlit.app/")
 
     with st.container(border=True):
-        st.subheader("👁️ Detección de Objetos")
-        img = cargar_imagen('txt_to_audio.png')
+        st.subheader("3. 🌐 Traductor")
+        img = cargar_imagen('OIG2.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Identificación y segmentación de objetos en tiempo real con arquitecturas YOLOv5.")
-        st.link_button("Probar App ↗", "https://yolov5cmc.streamlit.app/")
+        st.write("Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.")
+        st.link_button("Probar App ↗", "https://vtranscrip.streamlit.app/")
 
     with st.container(border=True):
-        st.subheader("🧠 Modelos Personalizados")
-        img = cargar_imagen('OIG5.jpg')
+        st.subheader("4. 📄 OCR")
+        img = cargar_imagen('Chat_pdf.png')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Implementación y despliegue de modelos de visión entrenados con conjuntos de datos propios.")
-        st.link_button("Probar App ↗", "https://yolov5cmc.streamlit.app/")
+        st.write("Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.")
+        st.link_button("Probar App ↗", "https://ragpdf.streamlit.app/")
 
 # --- COLUMNA 2 ---
 with col2:
     with st.container(border=True):
-        st.subheader("🎙️ Voz a Texto")
+        st.subheader("5. 🔊 OCR Audio")
         img = cargar_imagen('audio_to_txt.png')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Transcripción y reconocimiento de voz continua convertida a caracteres de texto.")
+        st.write("Extracción de texto desde imágenes con lectura asistida por sintesis de voz.")
         st.link_button("Probar App ↗", "https://vvoztext.streamlit.app/")
 
     with st.container(border=True):
-        st.subheader("📊 Análisis de Datos con Agentes")
+        st.subheader("6. ☁️ Word Cloud Studio")
         img = cargar_imagen('data_analisis.png')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Exploración e interpretación automatizada de datasets mediante agentes inteligentes.")
+        st.write("Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.")
         st.link_button("Probar App ↗", "https://agenteanalisis.streamlit.app/")
 
     with st.container(border=True):
-        st.subheader("📝 Transcriptor Multimedia")
-        img = cargar_imagen('OIG2.jpg')
+        st.subheader("7. 😊 Análisis de Sentimiento")
+        img = cargar_imagen('OIG6.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Procesamiento de archivos de audio y video para extracción e indexación de texto.")
-        st.link_button("Probar App ↗", "https://vtranscrip.streamlit.app/")
+        st.write("Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.")
+        st.link_button("Probar App ↗", "https://agenteanalisis.streamlit.app/")
 
 # --- COLUMNA 3 ---
 with col3:
     with st.container(border=True):
-        st.subheader("📚 RAG en Documentos (PDF)")
-        img = cargar_imagen('Chat_pdf.png')
-        if img:
-            st.image(img, use_container_width=True)
-        st.write("Sistema de generación aumentada por recuperación para interactuar y consultar PDFs.")
-        st.link_button("Probar App ↗", "https://ragpdf.streamlit.app/")
-
-    with st.container(border=True):
-        st.subheader("🔍 Análisis Visual con VLM")
+        st.subheader("8. 📊 TF-IDF en Español")
         img = cargar_imagen('OIG3.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Evaluación razonada e interpretación del contexto de imágenes mediante modelos de visión-lenguaje.")
+        st.write("Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.")
         st.link_button("Probar App ↗", "https://agente-vision.streamlit.app/")
 
     with st.container(border=True):
-        st.subheader("🌐 Sistema Ciberfísico")
-        img = cargar_imagen('OIG4.jpg')
+        st.subheader("9. 👁️ Detección de Objetos")
+        img = cargar_imagen('txt_to_audio.png')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Integración de sensores y actuadores con la nube para monitoreo e interacción en tiempo real.")
-        st.link_button("Probar App ↗", "https://ciberfisico.streamlit.app/")
+        st.write("Identificación y delimitación de elementos en imágenes en tiempo real con modelos YOLO.")
+        st.link_button("Probar App ↗", "https://yolov5cmc.streamlit.app/")
+
+    with st.container(border=True):
+        st.subheader("10. 🤖 Teachable Machine")
+        img = cargar_imagen('OIG5.jpg')
+        if img:
+            st.image(img, use_container_width=True)
+        st.write("Reconocimiento y clasificación de imágenes con modelos personalizados de Teachable Machine.")
+        st.link_button("Probar App ↗", "https://yolov5cmc.streamlit.app/")
 
 # 5. Pie de página
 st.divider()
