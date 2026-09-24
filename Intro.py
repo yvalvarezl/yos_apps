@@ -119,7 +119,7 @@ with col2:
         if img:
             st.image(img, use_container_width=True)
         st.write("Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.")
-        st.link_button("Probar App ↗", "https://imultimod.streamlit.app/")
+        st.link_button("Probar App ↗", "https://muft7fr6sdrf56gmap3rdk.streamlit.app")
 
 with col3:
     with st.container(border=True):
@@ -128,7 +128,7 @@ with col3:
         if img:
             st.image(img, use_container_width=True)
         st.write("Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.")
-        st.link_button("Probar App ↗", "https://vtranscrip.streamlit.app/")
+        st.link_button("Probar App ↗", "https://clase7-bnkuljdihpt7zbva3lggy7.streamlit.app")
 
 # --- FILA 2 (Apps 4, 5, 6) ---
 col4, col5, col6 = st.columns(3, gap="medium")
