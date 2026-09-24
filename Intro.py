@@ -10,11 +10,47 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado adicional para mejorar visualmente los botones y tarjetas
+# Estilo personalizado en paleta Rosa & Blanco
 st.markdown("""
     <style>
-    .main .block-container { padding-top: 2rem; }
-    .stButton>button { width: 100%; border-radius: 8px; }
+    /* Fondo principal de la app */
+    .stApp {
+        background-color: #FFF5F7;
+        color: #4A2E35;
+    }
+    
+    /* Fondo de la barra lateral */
+    [data-testid="stSidebar"] {
+        background-color: #FFE4E1;
+    }
+    
+    /* Estilo de las tarjetas / contenedores */
+    [data-testid="stVerticalBlockBorderWrapper"] > div {
+        background-color: #FFFFFF;
+        border: 1px solid #FFB6C1 !important;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(255, 182, 193, 0.2);
+    }
+    
+    /* Botones principales */
+    .stButton>button, .stLinkButton>a {
+        width: 100%;
+        border-radius: 8px;
+        background-color: #FFB6C1 !important;
+        color: #4A2E35 !important;
+        border: none !important;
+        font-weight: bold;
+    }
+    
+    .stButton>button:hover, .stLinkButton>a:hover {
+        background-color: #FF69B4 !important;
+        color: white !important;
+    }
+    
+    /* Títulos y encabezados */
+    h1, h2, h3 {
+        color: #D87093 !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
