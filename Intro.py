@@ -98,10 +98,11 @@ def cargar_imagen(nombre_archivo):
         return Image.open(nombre_archivo)
     return None
 
-# 4. Rejilla de Proyectos (3 Columnas)
+# 4. Rejilla de Proyectos (Ordenada Horizontalmente: 1, 2, 3 | 4, 5, 6 | 7, 8, 9 | 10)
+
+# --- FILA 1 (Apps 1, 2, 3) ---
 col1, col2, col3 = st.columns(3, gap="medium")
 
-# --- COLUMNA 1 ---
 with col1:
     with st.container(border=True):
         st.subheader("1. 🚀 Mi Primera App (Intro)")
@@ -111,6 +112,7 @@ with col1:
         st.write("Interfaz inicial y bienvenida interactiva del portafolio de aplicaciones.")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+with col2:
     with st.container(border=True):
         st.subheader("2. 🗣️ Texto a Audio")
         img = cargar_imagen('txt_to_audio2.png')
@@ -119,6 +121,7 @@ with col1:
         st.write("Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.")
         st.link_button("Probar App ↗", "https://imultimod.streamlit.app/")
 
+with col3:
     with st.container(border=True):
         st.subheader("3. 🌐 Traductor")
         img = cargar_imagen('OIG2.jpg')
@@ -127,6 +130,10 @@ with col1:
         st.write("Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.")
         st.link_button("Probar App ↗", "https://vtranscrip.streamlit.app/")
 
+# --- FILA 2 (Apps 4, 5, 6) ---
+col4, col5, col6 = st.columns(3, gap="medium")
+
+with col4:
     with st.container(border=True):
         st.subheader("4. 📄 OCR")
         img = cargar_imagen('Chat_pdf.png')
@@ -135,8 +142,7 @@ with col1:
         st.write("Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.")
         st.link_button("Probar App ↗", "https://ragpdf.streamlit.app/")
 
-# --- COLUMNA 2 ---
-with col2:
+with col5:
     with st.container(border=True):
         st.subheader("5. 🔊 OCR Audio")
         img = cargar_imagen('audio_to_txt.png')
@@ -145,6 +151,7 @@ with col2:
         st.write("Extracción de texto desde imágenes con lectura asistida por sintesis de voz.")
         st.link_button("Probar App ↗", "https://vvoztext.streamlit.app/")
 
+with col6:
     with st.container(border=True):
         st.subheader("6. ☁️ Word Cloud Studio")
         img = cargar_imagen('data_analisis.png')
@@ -153,6 +160,10 @@ with col2:
         st.write("Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.")
         st.link_button("Probar App ↗", "https://agenteanalisis.streamlit.app/")
 
+# --- FILA 3 (Apps 7, 8, 9) ---
+col7, col8, col9 = st.columns(3, gap="medium")
+
+with col7:
     with st.container(border=True):
         st.subheader("7. 😊 Análisis de Sentimiento")
         img = cargar_imagen('OIG6.jpg')
@@ -161,8 +172,7 @@ with col2:
         st.write("Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.")
         st.link_button("Probar App ↗", "https://agenteanalisis.streamlit.app/")
 
-# --- COLUMNA 3 ---
-with col3:
+with col8:
     with st.container(border=True):
         st.subheader("8. 📊 TF-IDF en Español")
         img = cargar_imagen('OIG3.jpg')
@@ -171,6 +181,7 @@ with col3:
         st.write("Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.")
         st.link_button("Probar App ↗", "https://agente-vision.streamlit.app/")
 
+with col9:
     with st.container(border=True):
         st.subheader("9. 👁️ Detección de Objetos")
         img = cargar_imagen('txt_to_audio.png')
@@ -179,6 +190,10 @@ with col3:
         st.write("Identificación y delimitación de elementos en imágenes en tiempo real con modelos YOLO.")
         st.link_button("Probar App ↗", "https://yolov5cmc.streamlit.app/")
 
+# --- FILA 4 (App 10) ---
+col10, col11, col12 = st.columns(3, gap="medium")
+
+with col10:
     with st.container(border=True):
         st.subheader("10. 🤖 Teachable Machine")
         img = cargar_imagen('OIG5.jpg')
