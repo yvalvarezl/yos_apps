@@ -170,7 +170,7 @@ with col7:
         if img:
             st.image(img, use_container_width=True)
         st.write("Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.")
-        st.link_button("Probar App ↗", "https://agenteanalisis.streamlit.app/")
+        st.link_button("Probar App ↗", "https://sentimenta-nbrfl7tq5hdoudmmg7begf.streamlit.app")
 
 with col8:
     with st.container(border=True):
