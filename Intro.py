@@ -158,7 +158,7 @@ with col6:
         if img:
             st.image(img, use_container_width=True)
         st.write("Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.")
-        st.link_button("Probar App ↗", "https://agenteanalisis.streamlit.app/")
+        st.link_button("Probar App ↗", "https://wordcloud-qjnbdgn9mfmrjg6pzqyisk.streamlit.app")
 
 # --- FILA 3 (Apps 7, 8, 9) ---
 col7, col8, col9 = st.columns(3, gap="medium")
