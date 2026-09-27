@@ -140,7 +140,7 @@ with col4:
         if img:
             st.image(img, use_container_width=True)
         st.write("Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.")
-        st.link_button("Probar App ↗", "https://ragpdf.streamlit.app/")
+        st.link_button("Probar App ↗", "https://ocryos-2jqgsiudbbuhemcmy7tugg.streamlit.app/")
 
 with col5:
     with st.container(border=True):
