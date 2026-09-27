@@ -4,7 +4,7 @@ import os
 
 # 1. Configuración general de la página
 st.set_page_config(
-    page_title="Portafolio | Yoselin Álvarez",
+    page_title=**"Portafolio | Yoselin Álvarez"**,
     page_icon="🎨",
     layout="wide",
     initial_sidebar_state="expanded"
