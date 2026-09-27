@@ -188,7 +188,7 @@ with col9:
         if img:
             st.image(img, use_container_width=True)
         st.write("Identificación y delimitación de elementos en imágenes en tiempo real con modelos YOLO.")
-        st.link_button("Probar App ↗", "https://yolov5cmc.streamlit.app/")
+        st.link_button("Probar App ↗", "https://yolov5-t3xktwyu4jqx7ddb5pyqdb.streamlit.app")
 
 # --- FILA 4 (App 10) ---
 col10, col11, col12 = st.columns(3, gap="medium")
