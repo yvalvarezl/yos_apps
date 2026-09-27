@@ -200,7 +200,7 @@ with col10:
         if img:
             st.image(img, use_container_width=True)
         st.write("Reconocimiento y clasificación de imágenes con modelos personalizados de Teachable Machine.")
-        st.link_button("Probar App ↗", "https://yolov5cmc.streamlit.app/")
+        st.link_button("Probar App ↗", "https://teachablemachineyose.streamlit.app/")
 
 # 5. Pie de página
 st.divider()
