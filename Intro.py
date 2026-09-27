@@ -153,7 +153,7 @@ with col5:
 
 with col6:
     with st.container(border=True):
-        st.subheader("6. ☁️ Word Cloud Studio")
+        st.subheader("**6. ☁️ Word Cloud Studio**")
         img = cargar_imagen('data_analisis.png')
         if img:
             st.image(img, use_container_width=True)
@@ -165,7 +165,7 @@ col7, col8, col9 = st.columns(3, gap="medium")
 
 with col7:
     with st.container(border=True):
-        st.subheader("7. 😊 Análisis de Sentimiento")
+        st.subheader("**7. 😊 Análisis de Sentimiento**")
         img = cargar_imagen('OIG6.jpg')
         if img:
             st.image(img, use_container_width=True)
@@ -174,7 +174,7 @@ with col7:
 
 with col8:
     with st.container(border=True):
-        st.subheader("8. 📊 TF-IDF en Español")
+        st.subheader("**8. 📊 TF-IDF en Español**")
         img = cargar_imagen('OIG3.jpg')
         if img:
             st.image(img, use_container_width=True)
@@ -183,7 +183,7 @@ with col8:
 
 with col9:
     with st.container(border=True):
-        st.subheader("9. 👁️ Detección de Objetos")
+        st.subheader("**9. 👁️ Detección de Objetos**")
         img = cargar_imagen('txt_to_audio.png')
         if img:
             st.image(img, use_container_width=True)
@@ -195,7 +195,7 @@ col10, col11, col12 = st.columns(3, gap="medium")
 
 with col10:
     with st.container(border=True):
-        st.subheader("10. 🤖 Teachable Machine")
+        st.subheader("**10. 🤖 Teachable Machine**")
         img = cargar_imagen('OIG5.jpg')
         if img:
             st.image(img, use_container_width=True)
