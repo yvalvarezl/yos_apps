@@ -114,7 +114,7 @@ with col1:
 
 with col2:
     with st.container(border=True):
-        st.subheader("2. 🗣️ Texto a Audio")
+        st.subheader("**2. 🗣️ Texto a Audio**")
         img = cargar_imagen('txt_to_audio2.png')
         if img:
             st.image(img, use_container_width=True)
@@ -123,7 +123,7 @@ with col2:
 
 with col3:
     with st.container(border=True):
-        st.subheader("3. 🌐 Traductor")
+        st.subheader("**3. 🌐 Traductor**")
         img = cargar_imagen('OIG2.jpg')
         if img:
             st.image(img, use_container_width=True)
@@ -135,7 +135,7 @@ col4, col5, col6 = st.columns(3, gap="medium")
 
 with col4:
     with st.container(border=True):
-        st.subheader("4. 📄 OCR")
+        st.subheader("**4. 📄 OCR**")
         img = cargar_imagen('Chat_pdf.png')
         if img:
             st.image(img, use_container_width=True)
@@ -144,7 +144,7 @@ with col4:
 
 with col5:
     with st.container(border=True):
-        st.subheader("5. 🔊 OCR Audio")
+        st.subheader("**5. 🔊 OCR Audio**")
         img = cargar_imagen('audio_to_txt.png')
         if img:
             st.image(img, use_container_width=True)
