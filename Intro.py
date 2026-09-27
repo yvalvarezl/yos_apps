@@ -76,10 +76,10 @@ st.markdown("""
 
 # 2. Barra Lateral (Sidebar)
 with st.sidebar:
-    st.title("🎨 Yoselin Álvarez")
+    st.title("🎨 **Yoselin Álvarez**")
     st.caption("Diseñadora Interactiva")
     st.markdown("""
-    ¡Hola! 👋 Bienvenido a mi portafolio interactivo. Aquí presento **10 aplicaciones interactivas** enfocadas en IA, procesamiento de texto, visión por computador y análisis de datos.
+    **¡Hola!** 👋 Bienvenido a mi portafolio interactivo. Aquí presento **10 aplicaciones interactivas** enfocadas en IA, procesamiento de texto, visión por computador y análisis de datos.
     """)
     st.divider()
     st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar los prototipos.")
