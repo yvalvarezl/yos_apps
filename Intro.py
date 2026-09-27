@@ -149,7 +149,7 @@ with col5:
         if img:
             st.image(img, use_container_width=True)
         st.write("Extracción de texto desde imágenes con lectura asistida por sintesis de voz.")
-        st.link_button("Probar App ↗", "https://vvoztext.streamlit.app/")
+        st.link_button("Probar App ↗", "https://clase7-ocr-audio-bv2323mmzeyfhyxkbnzddy.streamlit.app/")
 
 with col6:
     with st.container(border=True):
