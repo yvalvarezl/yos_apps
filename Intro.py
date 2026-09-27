@@ -79,7 +79,7 @@ with st.sidebar:
     st.title("🎨 **Yoselin Álvarez**")
     st.caption("Diseñadora Interactiva")
     st.markdown("""
-    **¡Hola!** 👋 Bienvenido a mi portafolio interactivo. Aquí presento **10 aplicaciones interactivas** enfocadas en IA, procesamiento de texto, visión por computador y análisis de datos.
+    **¡Hola!** 👋 Bienvenid@ a mi portafolio interactivo. Aquí presento **10 aplicaciones interactivas** enfocadas en IA, procesamiento de texto, visión por computador y análisis de datos.
     """)
     st.divider()
     st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar los prototipos.")
@@ -87,7 +87,7 @@ with st.sidebar:
 # 3. Encabezado Principal
 st.title("⚡ **Portafolio de Proyectos e Inteligencia Artificial**")
 st.markdown("""
-Colección de 10 herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Inteligencia Artificial.
+Colección de 10 herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Interfaces multimodales.
 """)
 
 st.divider()
