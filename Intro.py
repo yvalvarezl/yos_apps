@@ -105,7 +105,7 @@ col1, col2, col3 = st.columns(3, gap="medium")
 
 with col1:
     with st.container(border=True):
-        st.subheader("**1. 🚀 Mi Primera App (Intro)**")
+        st.subheader("**1. 🚀 Mi Primera App** (Intro)")
         img = cargar_imagen('OIG8.jpg')
         if img:
             st.image(img, use_container_width=True)
