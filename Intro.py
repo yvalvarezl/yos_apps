@@ -4,7 +4,7 @@ import os
 
 # 1. Configuración general de la página
 st.set_page_config(
-    page_title= "**Portafolio** | Yoselin Álvarez",
+    page_title= "Portafolio | Yoselin Álvarez",
     page_icon="🎨",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -85,7 +85,7 @@ with st.sidebar:
     st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar los prototipos.")
 
 # 3. Encabezado Principal
-st.title("⚡ Portafolio de Proyectos e Inteligencia Artificial")
+st.title("⚡ **Portafolio de Proyectos e Inteligencia Artificial**")
 st.markdown("""
 Colección de 10 herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Inteligencia Artificial.
 """)
