@@ -10,45 +10,40 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado
+# Estilo personalizado: Rosa tierno e intenso con alta legibilidad
 st.markdown("""
     <style>
-    /* Fondo superior y principal */
+    /* 1. Fondo de la barra superior */
     header[data-testid="stHeader"] {
         background-color: #FFD1DC !important;
     }
     
+    /* 2. Fondo principal de la app */
     .stApp {
-        background-color: #FFD1DC !important;
+        background-color: #FFD1DC;
         color: #1A1A1A !important;
     }
 
-    /* Barra lateral */
+    /* 3. Fondo de la barra lateral */
     [data-testid="stSidebar"] {
         background-color: #FFC0CB !important;
     }
 
-    /* Texto general */
+    /* 4. Texto general */
     .stApp p, .stApp span, .stApp label, [data-testid="stSidebar"] p, [data-testid="stSidebar"] span {
         color: #2B1B22 !important;
         font-weight: 500;
     }
 
-    /* FORZAR CONTENEDORES CON BORDE A SER BLANCOS */
-    div[data-testid="stForm"],
-    div[data-testid="stVerticalBlockBorderWrapper"] {
+    /* 5. Tarjetas de proyectos */
+    [data-testid="stVerticalBlockBorderWrapper"] > div {
         background-color: #FFFFFF !important;
-        border: 2px solid #FF8DA1 !important;
-        border-radius: 16px !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+        border: 2px solid #FF69B4 !important;
+        border-radius: 16px;
+        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.25);
     }
 
-    div[data-testid="stVerticalBlockBorderWrapper"] > div {
-        background-color: #FFFFFF !important;
-        border-radius: 14px !important;
-    }
-
-    /* Botones */
+    /* 6. Botones */
     .stButton>button, .stLinkButton>a {
         width: 100%;
         border-radius: 10px;
@@ -64,12 +59,13 @@ st.markdown("""
         box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4);
     }
 
-    /* Títulos */
+    /* Títulos y Subtítulos */
     h1, h2, h3, h4, h5, h6 {
         color: #8B004B !important;
         font-weight: 800 !important;
     }
 
+    /* Ocultar menú de Streamlit */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     </style>
