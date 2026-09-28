@@ -90,9 +90,10 @@ st.title("⚡ Portafolio de Proyectos e Inteligencia Artificial")
 st.write("Colección de 10 herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Interfaces multimodales.")
 st.write("---")
 
-# Fila 1: Proyectos 1, 2 y 3
-col1, col2, col3 = st.columns(3, gap="medium")
+# Estructura en cuadrícula (2 columnas por fila)
+col1, col2 = st.columns(2, gap="medium")
 
+# 1. Mi Primera App (Intro)
 with col1:
     with st.container(border=True):
         st.subheader("1. 🚀 Mi Primera App (Intro)")
@@ -102,6 +103,7 @@ with col1:
         st.caption("*Prototipo base con prueba de widgets, columnas y entradas de texto.*")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+# 2. Texto a Audio
 with col2:
     with st.container(border=True):
         st.subheader("2. 🗣️ Texto a Audio")
@@ -111,6 +113,9 @@ with col2:
         st.caption("*Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.*")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+col3, col4 = st.columns(2, gap="medium")
+
+# 3. Traductor
 with col3:
     with st.container(border=True):
         st.subheader("3. 🌐 Traductor")
@@ -120,9 +125,7 @@ with col3:
         st.caption("*Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.*")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-# Fila 2: Proyectos 4, 5 y 6
-col4, col5, col6 = st.columns(3, gap="medium")
-
+# 4. OCR
 with col4:
     with st.container(border=True):
         st.subheader("4. 📄 OCR")
@@ -132,6 +135,9 @@ with col4:
         st.caption("*Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.*")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+col5, col6 = st.columns(2, gap="medium")
+
+# 5. OCR Audio
 with col5:
     with st.container(border=True):
         st.subheader("5. 🔊 OCR Audio")
@@ -141,6 +147,7 @@ with col5:
         st.caption("*Extracción de texto desde imágenes con lectura asistida por síntesis de voz.*")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+# 6. Word Cloud Studio
 with col6:
     with st.container(border=True):
         st.subheader("6. ☁️ Word Cloud Studio")
@@ -150,9 +157,9 @@ with col6:
         st.caption("*Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.*")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-# Fila 3: Proyectos 7, 8 y 9
-col7, col8, col9 = st.columns(3, gap="medium")
+col7, col8 = st.columns(2, gap="medium")
 
+# 7. Análisis de Sentimiento
 with col7:
     with st.container(border=True):
         st.subheader("7. 😊 Análisis de Sentimiento")
@@ -162,6 +169,7 @@ with col7:
         st.caption("*Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.*")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+# 8. TF-IDF en Español
 with col8:
     with st.container(border=True):
         st.subheader("8. 📊 TF-IDF en Español")
@@ -171,6 +179,9 @@ with col8:
         st.caption("*Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.*")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+col9, col10 = st.columns(2, gap="medium")
+
+# 9. Detección de Objetos
 with col9:
     with st.container(border=True):
         st.subheader("9. 👁️ Detección de Objetos")
@@ -180,9 +191,7 @@ with col9:
         st.caption("*Identificación y delimitación de elementos en imágenes en tiempo real con modelos YOLO.*")
         st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-# Fila 4: Proyecto 10
-col10, col_vacía1, col_vacía2 = st.columns(3, gap="medium")
-
+# 10. Teachable Machine
 with col10:
     with st.container(border=True):
         st.subheader("10. 🤖 Teachable Machine")
