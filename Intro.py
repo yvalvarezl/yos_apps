@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado: Rosa tierno e intenso con alta legibilidad
+# Estilo personalizado: Rosa tierno e intenso con tarjetas blancas semitransparentes
 st.markdown("""
     <style>
     /* 1. Fondo de la barra superior */
@@ -35,12 +35,13 @@ st.markdown("""
         font-weight: 500;
     }
 
-    /* 5. Tarjetas de proyectos */
+    /* 5. Tarjetas de proyectos (Blanco transparente con borde sutil) */
     [data-testid="stVerticalBlockBorderWrapper"] > div {
-        background-color: #FFFFFF !important;
+        background-color: rgba(255, 255, 255, 0.75) !important;
+        backdrop-filter: blur(8px);
         border: 2px solid #FF69B4 !important;
         border-radius: 16px;
-        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.25);
+        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.2);
     }
 
     /* 6. Botones */
