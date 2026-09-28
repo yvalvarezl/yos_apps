@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado: Rosa tierno con tarjetas blancas sólidas y limpias
+# Estilo personalizado: Fondo rosa con tarjetas marcadamente blancas
 st.markdown("""
     <style>
     /* 1. Fondo de la barra superior */
@@ -20,7 +20,7 @@ st.markdown("""
     
     /* 2. Fondo principal de la app */
     .stApp {
-        background-color: #FFD1DC;
+        background-color: #FFD1DC !important;
         color: #1A1A1A !important;
     }
 
@@ -35,17 +35,18 @@ st.markdown("""
         font-weight: 500;
     }
 
-    /* 5. Tarjetas de proyectos (Blanco casi puro con borde sutil rosa) */
-    [data-testid="stVerticalBlockBorderWrapper"] {
-        background-color: rgba(255, 255, 255, 0.92) !important;
-        border-radius: 16px;
+    /* 5. Tarjetas de proyectos (Fuerza fondo blanco sutilmente transparente) */
+    [data-testid="stVerticalBlockBorderWrapper"],
+    [data-testid="stVerticalBlockBorderWrapper"] > div,
+    [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stElementContainer"] {
+        background-color: rgba(255, 255, 255, 0.93) !important;
     }
 
-    [data-testid="stVerticalBlockBorderWrapper"] > div {
-        background-color: rgba(255, 255, 255, 0.92) !important;
-        border: 2px solid #FF8DA1 !important;
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    [data-testid="stVerticalBlockBorderWrapper"] {
+        border: 2px solid #FFB6C1 !important;
+        border-radius: 16px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+        padding: 10px;
     }
 
     /* 6. Botones */
