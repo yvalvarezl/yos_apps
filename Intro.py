@@ -4,7 +4,7 @@ import os
 
 # 1. Configuración general de la página
 st.set_page_config(
-    page_title= "Portafolio | Yoselin Álvarez",
+    page_title="Portafolio | Yoselin Álvarez",
     page_icon="🎨",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -23,7 +23,7 @@ st.markdown("""
         background-color: #FFD1DC;
         color: #1A1A1A !important;
     }
-    
+
     /* 3. Fondo de la barra lateral */
     [data-testid="stSidebar"] {
         background-color: #FFC0CB !important;
@@ -34,7 +34,7 @@ st.markdown("""
         color: #2B1B22 !important;
         font-weight: 500;
     }
-    
+
     /* 5. Tarjetas de proyectos */
     [data-testid="stVerticalBlockBorderWrapper"] > div {
         background-color: #FFFFFF !important;
@@ -42,7 +42,7 @@ st.markdown("""
         border-radius: 16px;
         box-shadow: 0 6px 14px rgba(255, 105, 180, 0.25);
     }
-    
+
     /* 6. Botones */
     .stButton>button, .stLinkButton>a {
         width: 100%;
@@ -52,156 +52,154 @@ st.markdown("""
         border: 1px solid #FF69B4 !important;
         font-weight: bold !important;
     }
-    
+
     .stButton>button:hover, .stLinkButton>a:hover {
         background-color: #FF1493 !important;
         color: #FFFFFF !important;
         box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4);
     }
-    
-    /* 7. Títulos */
-    h1, h2, h3 {
-        color: #C71585 !important;
+
+    /* Títulos y Subtítulos */
+    h1, h2, h3, h4, h5, h6 {
+        color: #8B004B !important;
         font-weight: 800 !important;
     }
-    
-    .stAlert {
-        background-color: #FFF0F5 !important;
-        border: 1px solid #FF69B4 !important;
-        color: #2B1B22 !important;
-        border-radius: 12px;
-    }
+
+    /* Ocultar menú de Streamlit */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
 
-# 2. Barra Lateral (Sidebar)
-with st.sidebar:
-    st.title("🎨 **Yoselin Álvarez**")
-    st.caption("Diseñadora Interactiva")
-    st.markdown("""
-    **¡Hola!** 👋 Bienvenid@ a mi portafolio interactivo. Aquí presento **10 aplicaciones interactivas** enfocadas en IA, procesamiento de texto, visión por computador y análisis de datos.
-    """)
-    st.divider()
-    st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar los prototipos.")
-
-# 3. Encabezado Principal
-st.title("⚡ **Portafolio de Proyectos e Inteligencia Artificial**")
-st.markdown("""
-Colección de 10 herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Interfaces multimodales.
-""")
-
-st.divider()
-
-# Función auxiliar para cargar imágenes
-def cargar_imagen(nombre_archivo):
-    if os.path.exists(nombre_archivo):
-        return Image.open(nombre_archivo)
+# Función aux para cargar imágenes sin fallar si no existen
+def cargar_imagen(nombre):
+    if os.path.exists(nombre):
+        return Image.open(nombre)
     return None
 
-# 4. Rejilla de Proyectos (Ordenada Horizontalmente: 1, 2, 3 | 4, 5, 6 | 7, 8, 9 | 10)
+# --- SIDEBAR / BARRA LATERAL ---
+with st.sidebar:
+    st.title("🎨 Yoselin Álvarez")
+    st.caption("*Diseñadora Interactiva*")
+    st.write("---")
+    st.write("¡Hola! 👋 Bienvenid@ a mi portafolio interactivo. Aquí presento **10 aplicaciones interactivas** enfocadas en IA, procesamiento de texto, visión por computador y análisis de datos.")
+    st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar los prototipos.")
 
-# --- FILA 1 (Apps 1, 2, 3) ---
-col1, col2, col3 = st.columns(3, gap="medium")
+# --- CONTENIDO PRINCIPAL ---
+st.title("⚡ Portafolio de Proyectos e Inteligencia Artificial")
+st.write("Colección de 10 herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Interfaces multimodales.")
+st.write("---")
 
+# Estructura en cuadrícula (2 columnas por fila)
+col1, col2 = st.columns(2, gap="medium")
+
+# 1. Mi Primera App (Intro)
 with col1:
     with st.container(border=True):
-        st.subheader("**1. 🚀 Mi Primera App** (Intro)")
-        img = cargar_imagen('OIG8.jpg')
+        st.subheader("1. 🚀 Mi Primera App (Intro)")
+        img = cargar_imagen('primerapp.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Prototipo base con prueba de widgets, columnas y entradas de texto.")
-        st.link_button("Probar App ↗", "https://4gzh5pcun8wvb4uwagf3pb.streamlit.app/")
+        st.caption("*Prototipo base con prueba de widgets, columnas y entradas de texto.*")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+# 2. Texto a Audio
 with col2:
     with st.container(border=True):
-        st.subheader("**2. 🗣️ Texto a Audio**")
-        img = cargar_imagen('txt_to_audio2.png')
+        st.subheader("2. 🗣️ Texto a Audio")
+        img = cargar_imagen('textoaaudio.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.")
-        st.link_button("Probar App ↗", "https://muft7fr6sdrf56gmap3rdk.streamlit.app")
+        st.caption("*Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.*")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+col3, col4 = st.columns(2, gap="medium")
+
+# 3. Traductor
 with col3:
     with st.container(border=True):
-        st.subheader("**3. 🌐 Traductor**")
-        img = cargar_imagen('OIG2.jpg')
+        st.subheader("3. 🌐 Traductor")
+        img = cargar_imagen('traductor.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.")
-        st.link_button("Probar App ↗", "https://clase7-bnkuljdihpt7zbva3lggy7.streamlit.app")
+        st.caption("*Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.*")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-# --- FILA 2 (Apps 4, 5, 6) ---
-col4, col5, col6 = st.columns(3, gap="medium")
-
+# 4. OCR
 with col4:
     with st.container(border=True):
-        st.subheader("**4. 📄 OCR**")
-        img = cargar_imagen('Chat_pdf.png')
+        st.subheader("4. 📄 OCR")
+        img = cargar_imagen('ocr.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.")
-        st.link_button("Probar App ↗", "https://ocryos-2jqgsiudbbuhemcmy7tugg.streamlit.app/")
+        st.caption("*Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.*")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+col5, col6 = st.columns(2, gap="medium")
+
+# 5. OCR Audio
 with col5:
     with st.container(border=True):
-        st.subheader("**5. 🔊 OCR Audio**")
-        img = cargar_imagen('audio_to_txt.png')
+        st.subheader("5. 🔊 OCR Audio")
+        img = cargar_imagen('ocraudio.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Extracción de texto desde imágenes con lectura asistida por sintesis de voz.")
-        st.link_button("Probar App ↗", "https://clase7-ocr-audio-bv2323mmzeyfhyxkbnzddy.streamlit.app/")
+        st.caption("*Extracción de texto desde imágenes con lectura asistida por síntesis de voz.*")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+# 6. Word Cloud Studio
 with col6:
     with st.container(border=True):
-        st.subheader("**6. ☁️ Word Cloud Studio**")
-        img = cargar_imagen('data_analisis.png')
+        st.subheader("6. ☁️ Word Cloud Studio")
+        img = cargar_imagen('wordcloud.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.")
-        st.link_button("Probar App ↗", "https://wordcloud-qjnbdgn9mfmrjg6pzqyisk.streamlit.app")
+        st.caption("*Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.*")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-# --- FILA 3 (Apps 7, 8, 9) ---
-col7, col8, col9 = st.columns(3, gap="medium")
+col7, col8 = st.columns(2, gap="medium")
 
+# 7. Análisis de Sentimiento
 with col7:
     with st.container(border=True):
-        st.subheader("**7. 😊 Análisis de Sentimiento**")
-        img = cargar_imagen('OIG6.jpg')
+        st.subheader("7. 😊 Análisis de Sentimiento")
+        img = cargar_imagen('sentimiento.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.")
-        st.link_button("Probar App ↗", "https://sentimenta-nbrfl7tq5hdoudmmg7begf.streamlit.app")
+        st.caption("*Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.*")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+# 8. TF-IDF en Español
 with col8:
     with st.container(border=True):
-        st.subheader("**8. 📊 TF-IDF en Español**")
-        img = cargar_imagen('OIG3.jpg')
+        st.subheader("8. 📊 TF-IDF en Español")
+        img = cargar_imagen('tfidf.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.")
-        st.link_button("Probar App ↗", "https://tdfesp-hdhnrmu5ofkutczpk5v4qu.streamlit.app/")
+        st.caption("*Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.*")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
+col9, col10 = st.columns(2, gap="medium")
+
+# 9. Detección de Objetos
 with col9:
     with st.container(border=True):
-        st.subheader("**9. 👁️ Detección de Objetos**")
-        img = cargar_imagen('txt_to_audio.png')
+        st.subheader("9. 👁️ Detección de Objetos")
+        img = cargar_imagen('identificador.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Identificación y delimitación de elementos en imágenes en tiempo real con modelos YOLO.")
-        st.link_button("Probar App ↗", "https://yolov5-t3xktwyu4jqx7ddb5pyqdb.streamlit.app")
+        st.caption("*Identificación y delimitación de elementos en imágenes en tiempo real con modelos YOLO.*")
+        st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-# --- FILA 4 (App 10) ---
-col10, col11, col12 = st.columns(3, gap="medium")
-
+# 10. Teachable Machine
 with col10:
     with st.container(border=True):
-        st.subheader("**10. 🤖 Teachable Machine**")
-        img = cargar_imagen('OIG5.jpg')
+        st.subheader("10. 🤖 Teachable Machine")
+        img = cargar_imagen('identidad.jpg')
         if img:
             st.image(img, use_container_width=True)
-        st.write("Reconocimiento y clasificación de imágenes con modelos personalizados de Teachable Machine.")
+        st.caption("*Reconocimiento y clasificación de imágenes con modelos personalizados de Teachable Machine.*")
         st.link_button("Probar App ↗", "https://teachablemachineyose.streamlit.app/")
 
-# 5. Pie de página
-st.divider()
+st.write("---")
 st.caption("Diseñado y desarrollado por Yoselin Álvarez © 2026 | Universidad EAFIT")
