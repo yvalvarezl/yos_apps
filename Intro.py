@@ -144,7 +144,7 @@ with tab1:
 
     col1, col2, col3 = st.columns(3, gap="medium")
     with col1:
-        crear_tarjeta("1. 🚀 Mi Primera App", "Prototipo base con prueba de widgets, columnas y entradas de texto.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "primerapp.jpg")
+        crear_tarjeta("1. 🚀 Mi Primera App", "Prototipo base con prueba de widgets, columnas y entradas de texto.", "https://4gzh5pcun8wvb4uwagf3pb.streamlit.app/", "primerapp.jpg")
     with col2:
         crear_tarjeta("2. 🗣️ Texto a Audio", "Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "textoaaudio.jpg")
     with col3:
