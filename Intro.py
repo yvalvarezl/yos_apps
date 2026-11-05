@@ -184,7 +184,7 @@ with tab2:
     with c2:
         crear_tarjeta("👁️‍🗨️ App Vision", "Interpretación visual, auditoría multimodal y análisis de imágenes.", "https://visionapp-7glas3iqv3ivsgoncb8hbc.streamlit.app/", "vision.jpg")
     with c3:
-        crear_tarjeta("✍️ Handwrite (MNIST)", "Predicción y reconocimiento de dígitos escritos a mano mediante redes neuronales.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "handwrite.jpg")
+        crear_tarjeta("✍️ Handwrite (MNIST)", "Predicción y reconocimiento de dígitos escritos a mano mediante redes neuronales.", "https://handwr-vcjhv2exufrmuhmhuwlmwh.streamlit.app/", "handwrite.jpg")
 
     c4, c5, c6 = st.columns(3, gap="medium")
     with c4:
