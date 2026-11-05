@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado: Rosa tierno con cards en rosado más oscuro y opacidad
+# Estilo personalizado: Cards tono rosa botón + Botón Blanco
 st.markdown("""
     <style>
     /* 1. Fondo de la barra superior */
@@ -35,13 +35,13 @@ st.markdown("""
         font-weight: 500;
     }
 
-    /* 5. Tarjetas de proyectos (Rosado más oscuro con opacidad) */
+    /* 5. Tarjetas de proyectos (Color rosa intenso como el botón original) */
     [data-testid="stVerticalBlockBorderWrapper"] > div {
-        background-color: rgba(255, 182, 193, 0.45) !important;
+        background-color: rgba(255, 182, 193, 0.85) !important;
         backdrop-filter: blur(8px);
         border: 2px solid #FF69B4 !important;
         border-radius: 16px;
-        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.25);
+        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
     }
 
     /* 6. Estilo de las pestañas (st.tabs) */
@@ -55,19 +55,20 @@ st.markdown("""
         border-bottom-color: #FF1493 !important;
     }
 
-    /* 7. Botones */
+    /* 7. Botones Blancos con texto e icono rosa */
     .stButton>button, .stLinkButton>a {
         width: 100%;
         border-radius: 10px;
-        background-color: #FFB6C1 !important;
-        color: #2B1B22 !important;
-        border: 1px solid #FF69B4 !important;
+        background-color: #FFFFFF !important;
+        color: #8B004B !important;
+        border: 2px solid #FF69B4 !important;
         font-weight: bold !important;
     }
 
     .stButton>button:hover, .stLinkButton>a:hover {
         background-color: #FF1493 !important;
         color: #FFFFFF !important;
+        border-color: #FF1493 !important;
         box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4);
     }
 
@@ -217,7 +218,7 @@ with tab1:
 
 
 # ---------------------------------------------------------
-# PESTAÑA 2: ENTREGA 2 (8 Aplicaciones con formato Entrega 1)
+# PESTAÑA 2: ENTREGA 2 (8 Aplicaciones)
 # ---------------------------------------------------------
 with tab2:
     st.markdown("### 🚀 Entrega 2: Visión por Computador, IA y Control Ciberfísico")
