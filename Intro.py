@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado: Cards rosa intenso + Botones blancos
+# Estilo personalizado: Cards Rosa Intenso + Botones Blancos
 st.markdown("""
     <style>
     /* 1. Fondo de la barra superior */
@@ -35,15 +35,19 @@ st.markdown("""
         font-weight: 500;
     }
 
-    /* 5. TARJETAS DE PROYECTOS (Color rosa intenso aplicado directamente a los contenedores) */
-    div[data-testid="stContainer"], 
-    div[data-testid="stVerticalBlockBorderWrapper"] > div,
-    [data-testid="stForm"] {
+    /* 5. FIX DEFINITIVO TARJETAS: Pintar todas las capas del contenedor */
+    [data-testid="stVerticalBlockBorderWrapper"],
+    [data-testid="stVerticalBlockBorderWrapper"] > div,
+    [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stVerticalBlock"] {
         background-color: #FFB6C1 !important;
-        border: 2px solid #FF69B4 !important;
         border-radius: 16px !important;
-        padding: 1rem !important;
-        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3) !important;
+    }
+
+    /* Borde rosa brillante y sombra a la tarjeta externa */
+    [data-testid="stVerticalBlockBorderWrapper"] {
+        border: 2px solid #FF69B4 !important;
+        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.35) !important;
+        padding: 0.5rem !important;
     }
 
     /* 6. Estilo de las pestañas (st.tabs) */
