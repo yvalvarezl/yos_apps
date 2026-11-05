@@ -152,19 +152,19 @@ with tab1:
 
     col4, col5, col6 = st.columns(3, gap="medium")
     with col4:
-        crear_tarjeta("4. 📄 OCR", "Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.", "https://ragpdf.streamlit.app/", "ocr.jpg")
+        crear_tarjeta("4. 📄 OCR", "Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.", "https://ocryos-2jqgsiudbbuhemcmy7tugg.streamlit.app/", "ocr.jpg")
     with col5:
-        crear_tarjeta("5. 🔊 OCR Audio", "Extracción de texto desde imágenes con lectura asistida por síntesis de voz.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "ocraudio.jpg")
+        crear_tarjeta("5. 🔊 OCR Audio", "Extracción de texto desde imágenes con lectura asistida por síntesis de voz.", "https://clase7-ocr-audio-bv2323mmzeyfhyxkbnzddy.streamlit.app/", "ocraudio.jpg")
     with col6:
-        crear_tarjeta("6. ☁️ Word Cloud Studio", "Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "wordcloud.jpg")
+        crear_tarjeta("6. ☁️ Word Cloud Studio", "Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.", "https://wordcloud-qjnbdgn9mfmrjg6pzqyisk.streamlit.app/", "wordcloud.jpg")
 
     col7, col8, col9 = st.columns(3, gap="medium")
     with col7:
-        crear_tarjeta("7. 😊 Análisis Sentimiento", "Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "sentimiento.jpg")
+        crear_tarjeta("7. 😊 Análisis Sentimiento", "Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.", "https://sentimenta-nbrfl7tq5hdoudmmg7begf.streamlit.app/", "sentimiento.jpg")
     with col8:
-        crear_tarjeta("8. 📊 TF-IDF Español", "Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "tfidf.jpg")
+        crear_tarjeta("8. 📊 TF-IDF Español", "Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.", "https://tdfesp-hdhnrmu5ofkutczpk5v4qu.streamlit.app/", "tfidf.jpg")
     with col9:
-        crear_tarjeta("9. 👁️ Detección de Objetos", "Identificación y delimitación de elementos en imágenes en tiempo real.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "identificador.jpg")
+        crear_tarjeta("9. 👁️ Detección de Objetos", "Identificación y delimitación de elementos en imágenes en tiempo real.", "https://yolov5-t3xktwyu4jqx7ddb5pyqdb.streamlit.app/", "identificador.jpg")
 
     col10, c_v1, c_v2 = st.columns(3, gap="medium")
     with col10:
