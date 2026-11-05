@@ -214,79 +214,77 @@ with tab1:
             st.caption("*Reconocimiento y clasificación de imágenes con modelos personalizados.*")
             st.link_button("Probar App ↗", "https://teachablemachineyose.streamlit.app/")
 
-
 # ---------------------------------------------------------
-# PESTAÑA 2: ENTREGA 2 (8 Aplicaciones Avanzadas / Visión e IoT)
+# PESTAÑA 2: ENTREGA 2 (Mismos títulos y emojis que tu compañero)
 # ---------------------------------------------------------
 with tab2:
     st.markdown("### 🚀 Entrega 2: Visión por Computador, IA y Control Ciberfísico")
-    st.write("Desarrollos de visión por computador, modelos generativos, lienzos interactivos y control ciberfísico vía MQTT con Wokwi.")
+    st.write("Proyectos de RAG, Visión por Computador, Lienzos Generativos e IoT (8 aplicaciones).")
     st.write("")
 
-    # Fila 1: Proyectos 1, 2 y 3 de la Entrega 2
+    # Fila 1 (Apps 01, 02 y 03)
     c1, c2, c3 = st.columns(3, gap="medium")
 
     with c1:
         with st.container(border=True):
-            st.subheader("01. 📷 Gestos Teachable Machine")
-            img = cargar_imagen('identidad.jpg')
-            if img:
-                st.image(img, use_container_width=True)
-            st.caption("*Clasificación de gestos en tiempo real con modelo de Keras.*")
-            st.link_button("Abrir App 🚀", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/Teachable_Machine")
+            st.caption("*APP 01*")
+            st.subheader("📈 Chat PDF")
+            st.caption("*Análisis conversacional e interacción con documentos PDF mediante arquitectura RAG.*")
+            st.link_button("Abrir App 🚀", "https://chatpdf-yos.streamlit.app/")
 
     with c2:
         with st.container(border=True):
-            st.subheader("02. 🎯 Detección YOLOv5")
-            img = cargar_imagen('identificador.jpg')
-            if img:
-                st.image(img, use_container_width=True)
-            st.caption("*Reconocimiento multiclase en tiempo real con umbrales configurables.*")
-            st.link_button("Abrir App 🚀", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/YOLO")
+            st.caption("*APP 02*")
+            st.subheader("👁️‍🗨️ App Vision")
+            st.caption("*Interpretación visual, auditoría multimodal y análisis de imágenes con GPT-4o.*")
+            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
     with c3:
         with st.container(border=True):
-            st.subheader("03. 🔐 Cerradura MQTT")
-            img = cargar_imagen('cerradura.jpg')
-            if img:
-                st.image(img, use_container_width=True)
-            st.caption("*Acceso por presencia facial con control por MQTT a servomotor en Wokwi.*")
-            st.link_button("Abrir App 🚀", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/Cerradura_Inteligente")
+            st.caption("*APP 03*")
+            st.subheader("✍️ Handwrite (MNIST)")
+            st.caption("*Predicción y reconocimiento de dígitos escritos a mano mediante redes neuronales.*")
+            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-    # Fila 2: Proyectos 4, 5 y 6 de la Entrega 2
+    # Fila 2 (Apps 04, 05 y 06)
     c4, c5, c6 = st.columns(3, gap="medium")
 
     with c4:
         with st.container(border=True):
-            st.subheader("04. ✨ Cosito Estelar / Fábula")
-            st.caption("*Lienzo de dibujo mágico para generación de historias a partir de bocetos.*")
-            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+            st.caption("*APP 04*")
+            st.subheader("🎨 Tablero Propio - Fábula Infantil")
+            st.caption("*Generador de fábulas e historias mágicas a partir de bocetos y dibujos interactivos.*")
+            st.link_button("Abrir App 🚀", "https://drawrecog-yos.streamlit.app/")
 
     with c5:
         with st.container(border=True):
-            st.subheader("05. 🔑 Key Vision")
-            st.caption("*Reconocimiento e interpretación de trazados con autenticación por API.*")
+            st.caption("*APP 05*")
+            st.subheader("🪄 Tablero API Key")
+            st.caption("*Reconocimiento de trazos e interpretación de dibujos con autenticación de API.*")
             st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
     with c6:
         with st.container(border=True):
-            st.subheader("06. 📡 Sensor Telemetría MQTT")
-            st.caption("*Monitoreo y recepción de datos de sensores ambientales en tiempo real.*")
+            st.caption("*APP 06*")
+            st.subheader("📡 Lector de Sensor MQTT")
+            st.caption("*Monitoreo y recepción de datos de telemetría de sensores en tiempo real desde ESP32 / Wokwi.*")
             st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-    # Fila 3: Proyectos 7 y 8 de la Entrega 2
-    c7, c8, c_vacía = st.columns(3, gap="medium")
+    # Fila 3 (Apps 07 y 08)
+    c7, c8, c_vacio = st.columns(3, gap="medium")
 
     with c7:
         with st.container(border=True):
-            st.subheader("07. ⚡ Panel Control MQTT")
-            st.caption("*Emisión de comandos digitales y analógicos hacia actuadores y plataformas externas.*")
-            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+            st.caption("*APP 07*")
+            st.subheader("🕹️ Control Servomotor MQTT")
+            st.caption("*Control presencial por visión y envío de comandos por MQTT al servomotor en Wokwi.*")
+            st.link_button("Abrir App 🚀", "https://clase14-tm-gestos-fisico-main.streamlit.app/")
 
     with c8:
         with st.container(border=True):
-            st.subheader("08. 🎙️ Interfaz Control por Voz")
-            st.caption("*Reconocimiento de comandos de voz para envío de señales de control.*")
+            st.caption("*APP 08*")
+            st.subheader("🎙️ Control por Voz")
+            st.caption("*Reconocimiento de comandos de voz para ejecutar acciones y enviar señales de control.*")
             st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
 
