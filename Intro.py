@@ -188,9 +188,9 @@ with tab2:
 
     c4, c5, c6 = st.columns(3, gap="medium")
     with c4:
-        crear_tarjeta("🎨 Lienzo estelar", "Generador de fábulas e historias estelares a partir de bocetos y dibujos interactivos.", "https://lienzoestelar.streamlit.app/", "fabula.jpg")
+        crear_tarjeta("🎨 Lienzo estelar", "Generador de fábulas e historias estelares a partir de bocetos y dibujos interactivos.", "https://drawrecog-bk7ffymwumpvkzfskyxde6.streamlit.app/", "fabula.jpg")
     with c5:
-        crear_tarjeta("🪄 Tablero API Key", "Reconocimiento de trazos e interpretación de dibujos con autenticación de API.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "tablero_api.jpg")
+        crear_tarjeta("🪄 Tablero API Key", "Reconocimiento de trazos e interpretación de dibujos con autenticación de API.", "https://lienzoestelar.streamlit.app/", "tablero_api.jpg")
     with c6:
         crear_tarjeta("📡 Lector de Sensor MQTT", "Monitoreo y recepción de datos de telemetría de sensores en tiempo real desde ESP32 / Wokwi.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "sensor_mqtt.jpg")
 
