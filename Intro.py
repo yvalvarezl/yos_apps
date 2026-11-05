@@ -180,7 +180,7 @@ with tab2:
 
     c1, c2, c3 = st.columns(3, gap="medium")
     with c1:
-        crear_tarjeta("📈 Chat PDF", "Análisis conversacional e interacción con documentos PDF mediante arquitectura RAG.", "https://chatpdf-yos.streamlit.app/", "chatpdf.jpg")
+        crear_tarjeta("📈 Chat PDF", "Análisis conversacional e interacción con documentos PDF mediante arquitectura RAG.", "https://chatpdf-guuyxeyj6opc52mohgdjhw.streamlit.app/", "chatpdf.jpg")
     with c2:
         crear_tarjeta("👁️‍🗨️ App Vision", "Interpretación visual, auditoría multimodal y análisis de imágenes.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "vision.jpg")
     with c3:
