@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado: Cards tono rosa botón + Botón Blanco
+# Estilo personalizado: Cards rosa intenso + Botones blancos
 st.markdown("""
     <style>
     /* 1. Fondo de la barra superior */
@@ -20,7 +20,7 @@ st.markdown("""
     
     /* 2. Fondo principal de la app */
     .stApp {
-        background-color: #FFD1DC;
+        background-color: #FFD1DC !important;
         color: #1A1A1A !important;
     }
 
@@ -35,13 +35,15 @@ st.markdown("""
         font-weight: 500;
     }
 
-    /* 5. Tarjetas de proyectos (Color rosa intenso como el botón original) */
-    [data-testid="stVerticalBlockBorderWrapper"] > div {
-        background-color: rgba(255, 182, 193, 0.85) !important;
-        backdrop-filter: blur(8px);
+    /* 5. TARJETAS DE PROYECTOS (Color rosa intenso aplicado directamente a los contenedores) */
+    div[data-testid="stContainer"], 
+    div[data-testid="stVerticalBlockBorderWrapper"] > div,
+    [data-testid="stForm"] {
+        background-color: #FFB6C1 !important;
         border: 2px solid #FF69B4 !important;
-        border-radius: 16px;
-        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
+        border-radius: 16px !important;
+        padding: 1rem !important;
+        box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3) !important;
     }
 
     /* 6. Estilo de las pestañas (st.tabs) */
@@ -55,10 +57,10 @@ st.markdown("""
         border-bottom-color: #FF1493 !important;
     }
 
-    /* 7. Botones Blancos con texto e icono rosa */
+    /* 7. BOTONES BLANCOS con texto e icono rosa */
     .stButton>button, .stLinkButton>a {
         width: 100%;
-        border-radius: 10px;
+        border-radius: 10px !important;
         background-color: #FFFFFF !important;
         color: #8B004B !important;
         border: 2px solid #FF69B4 !important;
@@ -69,7 +71,7 @@ st.markdown("""
         background-color: #FF1493 !important;
         color: #FFFFFF !important;
         border-color: #FF1493 !important;
-        box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4);
+        box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4) !important;
     }
 
     /* Títulos y Subtítulos */
