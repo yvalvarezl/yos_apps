@@ -188,7 +188,7 @@ with tab2:
 
     c4, c5, c6 = st.columns(3, gap="medium")
     with c4:
-        crear_tarjeta("🎨 Tablero Propio - Fábula Infantil", "Generador de fábulas e historias mágicas a partir de bocetos y dibujos interactivos.", "https://drawrecog-yos.streamlit.app/", "fabula.jpg")
+        crear_tarjeta("🎨 Lienzo estelar", "Generador de fábulas e historias estelares a partir de bocetos y dibujos interactivos.", "https://lienzoestelar.streamlit.app/", "fabula.jpg")
     with c5:
         crear_tarjeta("🪄 Tablero API Key", "Reconocimiento de trazos e interpretación de dibujos con autenticación de API.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "tablero_api.jpg")
     with c6:
