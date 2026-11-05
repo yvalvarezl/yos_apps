@@ -144,31 +144,31 @@ with tab1:
 
     col1, col2, col3 = st.columns(3, gap="medium")
     with col1:
-        crear_tarjeta("1. 🚀 Mi Primera App", "Prototipo base con prueba de widgets, columnas y entradas de texto.", "https://4gzh5pcun8wvb4uwagf3pb.streamlit.app/", "primerapp.jpg")
+        crear_tarjeta("🚀 Mi Primera App", "Prototipo base con prueba de widgets, columnas y entradas de texto.", "https://4gzh5pcun8wvb4uwagf3pb.streamlit.app/", "primerapp.jpg")
     with col2:
-        crear_tarjeta("2. 🗣️ Texto a Audio", "Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.", "https://muft7fr6sdrf56gmap3rdk.streamlit.app", "textoaaudio.jpg")
+        crear_tarjeta("🗣️ Texto a Audio", "Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.", "https://muft7fr6sdrf56gmap3rdk.streamlit.app", "textoaaudio.jpg")
     with col3:
-        crear_tarjeta("3. 🌐 Traductor", "Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.", "https://clase7-bnkuljdihpt7zbva3lggy7.streamlit.app", "traductor.jpg")
+        crear_tarjeta("🌐 Traductor", "Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.", "https://clase7-bnkuljdihpt7zbva3lggy7.streamlit.app", "traductor.jpg")
 
     col4, col5, col6 = st.columns(3, gap="medium")
     with col4:
-        crear_tarjeta("4. 📄 OCR", "Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.", "https://ocryos-2jqgsiudbbuhemcmy7tugg.streamlit.app/", "ocr.jpg")
+        crear_tarjeta("📄 OCR", "Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.", "https://ocryos-2jqgsiudbbuhemcmy7tugg.streamlit.app/", "ocr.jpg")
     with col5:
-        crear_tarjeta("5. 🔊 OCR Audio", "Extracción de texto desde imágenes con lectura asistida por síntesis de voz.", "https://clase7-ocr-audio-bv2323mmzeyfhyxkbnzddy.streamlit.app/", "ocraudio.jpg")
+        crear_tarjeta("🔊 OCR Audio", "Extracción de texto desde imágenes con lectura asistida por síntesis de voz.", "https://clase7-ocr-audio-bv2323mmzeyfhyxkbnzddy.streamlit.app/", "ocraudio.jpg")
     with col6:
-        crear_tarjeta("6. ☁️ Word Cloud Studio", "Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.", "https://wordcloud-qjnbdgn9mfmrjg6pzqyisk.streamlit.app/", "wordcloud.jpg")
+        crear_tarjeta("☁️ Word Cloud Studio", "Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.", "https://wordcloud-qjnbdgn9mfmrjg6pzqyisk.streamlit.app/", "wordcloud.jpg")
 
     col7, col8, col9 = st.columns(3, gap="medium")
     with col7:
-        crear_tarjeta("7. 😊 Análisis Sentimiento", "Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.", "https://sentimenta-nbrfl7tq5hdoudmmg7begf.streamlit.app/", "sentimiento.jpg")
+        crear_tarjeta("😊 Análisis Sentimiento", "Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.", "https://sentimenta-nbrfl7tq5hdoudmmg7begf.streamlit.app/", "sentimiento.jpg")
     with col8:
-        crear_tarjeta("8. 📊 TF-IDF Español", "Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.", "https://tdfesp-hdhnrmu5ofkutczpk5v4qu.streamlit.app/", "tfidf.jpg")
+        crear_tarjeta("📊 TF-IDF Español", "Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.", "https://tdfesp-hdhnrmu5ofkutczpk5v4qu.streamlit.app/", "tfidf.jpg")
     with col9:
-        crear_tarjeta("9. 👁️ Detección de Objetos", "Identificación y delimitación de elementos en imágenes en tiempo real.", "https://yolov5-t3xktwyu4jqx7ddb5pyqdb.streamlit.app/", "identificador.jpg")
+        crear_tarjeta("👁️ Detección de Objetos", "Identificación y delimitación de elementos en imágenes en tiempo real.", "https://yolov5-t3xktwyu4jqx7ddb5pyqdb.streamlit.app/", "identificador.jpg")
 
     col10, c_v1, c_v2 = st.columns(3, gap="medium")
     with col10:
-        crear_tarjeta("10. 🤖 Teachable Machine Base", "Reconocimiento y clasificación de imágenes con modelos personalizados.", "https://teachablemachineyose.streamlit.app/", "identidad.jpg")
+        crear_tarjeta("🤖 Teachable Machine Base", "Reconocimiento y clasificación de imágenes con modelos personalizados.", "https://teachablemachineyose.streamlit.app/", "identidad.jpg")
 
 # ---------------------------------------------------------
 # PESTAÑA 2: ENTREGA 2 (8 Aplicaciones)
