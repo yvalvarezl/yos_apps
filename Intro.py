@@ -144,19 +144,3 @@ with tab1:
 
     # Fila 2: Proyectos 4, 5 y 6
     col4, col5, col6 = st.columns(3, gap="medium")
-
-    with col4:
-        with st.container(border=True):
-            st.subheader("4. 📄 OCR")
-            img = cargar_imagen('ocr.jpg')
-            if img:
-                st.image(img, use_container_width=True)
-            st.caption("*Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.*")
-            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
-
-    with col5:
-        with st.container(border=True):
-            st.subheader("5. 🔊 OCR Audio")
-            img = cargar_imagen('ocraudio.jpg')
-            if img:
-                st.image(img,
