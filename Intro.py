@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado: Botones blancos y tipografía
+# Estilo personalizado: Botones blancos y tarjeta rosada ajustada
 st.markdown("""
     <style>
     /* 1. Fondo de la barra superior */
@@ -46,7 +46,7 @@ st.markdown("""
         border-bottom-color: #FF1493 !important;
     }
 
-    /* 6. BOTONES BLANCOS con texto e icono rosa */
+    /* 6. BOTONES BLANCOS dentro de tarjetas */
     .stButton>button, .stLinkButton>a {
         width: 100%;
         border-radius: 10px !important;
@@ -54,6 +54,7 @@ st.markdown("""
         color: #8B004B !important;
         border: 2px solid #FF69B4 !important;
         font-weight: bold !important;
+        margin-top: 8px !important;
     }
 
     .stButton>button:hover, .stLinkButton>a:hover {
@@ -63,8 +64,8 @@ st.markdown("""
         box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4) !important;
     }
 
-    /* Títulos y Subtítulos */
-    h1, h2, h3, h4, h5, h6 {
+    /* Títulos de la página */
+    h1, h2 {
         color: #8B004B !important;
         font-weight: 800 !important;
     }
@@ -81,27 +82,41 @@ def cargar_imagen(nombre):
         return Image.open(nombre)
     return None
 
-# Función auxiliar para renderizar la tarjeta en rosa con botón blanco
+# Función auxiliar compacta para la tarjeta
 def crear_tarjeta(titulo, desc, enlace, img_nombre=None):
-    st.markdown(f"""
-        <div style="
-            background-color: #FFB6C1;
-            border: 2px solid #FF69B4;
-            border-radius: 16px;
-            padding: 1.2rem;
-            box-shadow: 0 6px 14px rgba(255, 105, 180, 0.35);
-            margin-bottom: 0.8rem;
-        ">
-            <h3 style="color: #8B004B; margin-top: 0; font-size: 1.3rem;">{titulo}</h3>
-        </div>
-    """, unsafe_allow_html=True)
-    
-    img = cargar_imagen(img_nombre) if img_nombre else None
-    if img:
-        st.image(img, use_container_width=True)
+    with st.container():
+        # Encabezado apretado dentro del contenedor rosa
+        st.markdown(f"""
+            <div style="
+                background-color: #FFB6C1;
+                border: 2px solid #FF69B4;
+                border-radius: 16px 16px 0px 0px;
+                padding: 10px 14px 4px 14px;
+                box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+            ">
+                <h3 style="color: #8B004B; margin: 0; font-size: 1.15rem; font-weight: 800; padding: 0;">{titulo}</h3>
+            </div>
+        """, unsafe_allow_html=True)
         
-    st.caption(f"*{desc}*")
-    st.link_button("Probar App ↗", enlace)
+        # Bloque inferior integrado con la imagen y el botón
+        with st.container():
+            st.markdown("""
+                <style>
+                div[data-testid="stVerticalBlock"] > div:has(div.card-body) {
+                    background-color: #FFB6C1;
+                    border: 2px solid #FF69B4;
+                    border-top: none;
+                    border-radius: 0px 0px 16px 16px;
+                }
+                </style>
+            """, unsafe_allow_html=True)
+            
+            img = cargar_imagen(img_nombre) if img_nombre else None
+            if img:
+                st.image(img, use_container_width=True)
+                
+            st.caption(f"*{desc}*")
+            st.link_button("Probar App ↗", enlace)
 
 # --- SIDEBAR / BARRA LATERAL ---
 with st.sidebar:
@@ -156,7 +171,7 @@ with tab1:
         crear_tarjeta("10. 🤖 Teachable Machine Base", "Reconocimiento y clasificación de imágenes con modelos personalizados.", "https://teachablemachineyose.streamlit.app/", "identidad.jpg")
 
 # ---------------------------------------------------------
-# PESTAÑA 2: ENTREGA 2 (8 Aplicaciones con títulos de tu compañero)
+# PESTAÑA 2: ENTREGA 2 (8 Aplicaciones)
 # ---------------------------------------------------------
 with tab2:
     st.markdown("### 🚀 Entrega 2: Visión por Computador, IA y Control Ciberfísico")
