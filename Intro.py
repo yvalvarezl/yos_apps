@@ -144,3 +144,93 @@ with tab1:
 
     # Fila 2: Proyectos 4, 5 y 6
     col4, col5, col6 = st.columns(3, gap="medium")
+
+    with col4:
+        with st.container(border=True):
+            st.subheader("4. 📄 OCR")
+            img = cargar_imagen('ocr.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.*")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+    with col5:
+        with st.container(border=True):
+            st.subheader("5. 🔊 OCR Audio")
+            img = cargar_imagen('ocraudio.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Extracción de texto desde imágenes con lectura asistida por síntesis de voz.*")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+    with col6:
+        with st.container(border=True):
+            st.subheader("6. ☁️ Word Cloud")
+            img = cargar_imagen('wordcloud.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.*")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+    # Fila 3: Proyectos 7 y 8
+    col7, col8, col_v1 = st.columns(3, gap="medium")
+
+    with col7:
+        with st.container(border=True):
+            st.subheader("7. 😊 Análisis Sentimiento")
+            img = cargar_imagen('sentimiento.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Evaluación del tono emocional e intencionalidad en textos utilizando modelos NLP.*")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+    with col8:
+        with st.container(border=True):
+            st.subheader("8. 📊 TF-IDF Español")
+            img = cargar_imagen('tfidf.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.*")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+
+# ---------------------------------------------------------
+# PESTAÑA 2: ENTREGA 2 (Proyectos de Visión, TM & IoT)
+# ---------------------------------------------------------
+with tab2:
+    st.markdown("### 🚀 Entrega 2: Visión por Computador, IA y Control Ciberfísico")
+    st.write("Modelos avanzados de visión artificial, clasificación con Teachable Machine, YOLOv5 e integración ciberfísica por MQTT con Wokwi.")
+    st.write("")
+
+    col_a, col_b, col_c = st.columns(3, gap="medium")
+
+    with col_a:
+        with st.container(border=True):
+            st.subheader("9. 🤖 Teachable Machine")
+            img = cargar_imagen('identidad.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Reconocimiento y clasificación de gestos/imágenes en tiempo real mediante modelo Keras.*")
+            st.link_button("Probar App ↗", "https://teachablemachineyose.streamlit.app/")
+
+    with col_b:
+        with st.container(border=True):
+            st.subheader("10. 🎯 Detección YOLOv5")
+            img = cargar_imagen('identificador.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Detección y clasificación multiclase en tiempo real con umbrales ajustables de confianza.*")
+            st.link_button("Probar App ↗", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/YOLO")
+
+    with col_c:
+        with st.container(border=True):
+            st.subheader("11. 🔐 Cerradura MQTT")
+            img = cargar_imagen('cerradura.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Control de acceso presencial por visión computacional con transmisión de órdenes por MQTT a Wokwi.*")
+            st.link_button("Probar App ↗", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/Cerradura_Inteligente")
+
+
+st.write("---")
+st.caption("Diseñado y desarrollado por Yoselin Álvarez © 2026 | Universidad EAFIT")
