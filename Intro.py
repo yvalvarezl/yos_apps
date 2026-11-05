@@ -182,7 +182,7 @@ with tab2:
     with c1:
         crear_tarjeta("📈 Chat PDF", "Análisis conversacional e interacción con documentos PDF mediante arquitectura RAG.", "https://chatpdf-guuyxeyj6opc52mohgdjhw.streamlit.app/", "chatpdf.jpg")
     with c2:
-        crear_tarjeta("👁️‍🗨️ App Vision", "Interpretación visual, auditoría multimodal y análisis de imágenes.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "vision.jpg")
+        crear_tarjeta("👁️‍🗨️ App Vision", "Interpretación visual, auditoría multimodal y análisis de imágenes.", "https://visionapp-7glas3iqv3ivsgoncb8hbc.streamlit.app/", "vision.jpg")
     with c3:
         crear_tarjeta("✍️ Handwrite (MNIST)", "Predicción y reconocimiento de dígitos escritos a mano mediante redes neuronales.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "handwrite.jpg")
 
