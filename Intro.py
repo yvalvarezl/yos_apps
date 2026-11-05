@@ -93,7 +93,7 @@ with st.sidebar:
     st.title("🎨 Yoselin Álvarez")
     st.caption("*Diseñadora Interactiva*")
     st.write("---")
-    st.write("¡Hola! 👋 Bienvenid@ a mi portafolio interactivo. Explora los prototipos desarrollados en la **Entrega 1** y la **Entrega 2** navegando por las pestañas superiores.")
+    st.write("¡Hola! 👋 Bienvenid@ a mi portafolio interactivo. Explora los prototipos desarrollados en la **Entrega 1** (10 aplicaciones) y la **Entrega 2** (8 aplicaciones) navegando por las pestañas superiores.")
     st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar las aplicaciones.")
 
 # --- CONTENIDO PRINCIPAL ---
@@ -101,15 +101,15 @@ st.title("⚡ Portafolio de Proyectos e Inteligencia Artificial")
 st.write("Colección de herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Interfaces multimodales.")
 st.write("---")
 
-# Pestañas para organizar la Entrega 1 y la Entrega 2
-tab1, tab2 = st.tabs(["📦 Entrega 1 (NLP & Procesamiento)", "🚀 Entrega 2 (Visión & Control IoT)"])
+# Pestañas para organizar las Entregas
+tab1, tab2 = st.tabs(["📦 Entrega 1 (10 Aplicaciones)", "🚀 Entrega 2 (8 Aplicaciones)"])
 
 # ---------------------------------------------------------
-# PESTAÑA 1: ENTREGA 1 (Proyectos 1 al 8)
+# PESTAÑA 1: ENTREGA 1 (Las 10 apps iniciales)
 # ---------------------------------------------------------
 with tab1:
     st.markdown("### 📦 Entrega 1: Fundamentos de PNL y Procesamiento de Texto")
-    st.write("Exploración inicial de sintetizadores de voz, traductores, reconocedores OCR, análisis de sentimiento y TF-IDF.")
+    st.write("Exploración inicial de sintetizadores de voz, traductores, reconocedores OCR, nubes de palabras, análisis de sentimiento y TF-IDF.")
     st.write("")
 
     # Fila 1: Proyectos 1, 2 y 3
@@ -165,15 +165,15 @@ with tab1:
 
     with col6:
         with st.container(border=True):
-            st.subheader("6. ☁️ Word Cloud")
+            st.subheader("6. ☁️ Word Cloud Studio")
             img = cargar_imagen('wordcloud.jpg')
             if img:
                 st.image(img, use_container_width=True)
             st.caption("*Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.*")
             st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-    # Fila 3: Proyectos 7 y 8
-    col7, col8, col_v1 = st.columns(3, gap="medium")
+    # Fila 3: Proyectos 7, 8 y 9
+    col7, col8, col9 = st.columns(3, gap="medium")
 
     with col7:
         with st.container(border=True):
@@ -193,43 +193,101 @@ with tab1:
             st.caption("*Cálculo de relevancia de palabras clave en corpus de texto en español mediante algoritmo TF-IDF.*")
             st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-
-# ---------------------------------------------------------
-# PESTAÑA 2: ENTREGA 2 (Proyectos de Visión, TM & IoT)
-# ---------------------------------------------------------
-with tab2:
-    st.markdown("### 🚀 Entrega 2: Visión por Computador, IA y Control Ciberfísico")
-    st.write("Modelos avanzados de visión artificial, clasificación con Teachable Machine, YOLOv5 e integración ciberfísica por MQTT con Wokwi.")
-    st.write("")
-
-    col_a, col_b, col_c = st.columns(3, gap="medium")
-
-    with col_a:
+    with col9:
         with st.container(border=True):
-            st.subheader("9. 🤖 Teachable Machine")
-            img = cargar_imagen('identidad.jpg')
-            if img:
-                st.image(img, use_container_width=True)
-            st.caption("*Reconocimiento y clasificación de gestos/imágenes en tiempo real mediante modelo Keras.*")
-            st.link_button("Probar App ↗", "https://teachablemachineyose.streamlit.app/")
-
-    with col_b:
-        with st.container(border=True):
-            st.subheader("10. 🎯 Detección YOLOv5")
+            st.subheader("9. 👁️ Detección de Objetos")
             img = cargar_imagen('identificador.jpg')
             if img:
                 st.image(img, use_container_width=True)
-            st.caption("*Detección y clasificación multiclase en tiempo real con umbrales ajustables de confianza.*")
-            st.link_button("Probar App ↗", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/YOLO")
+            st.caption("*Identificación y delimitación de elementos en imágenes en tiempo real.*")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-    with col_c:
+    # Fila 4: Proyecto 10
+    col10, col_v1, col_v2 = st.columns(3, gap="medium")
+
+    with col10:
         with st.container(border=True):
-            st.subheader("11. 🔐 Cerradura MQTT")
+            st.subheader("10. 🤖 Teachable Machine Base")
+            img = cargar_imagen('identidad.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Reconocimiento y clasificación de imágenes con modelos personalizados.*")
+            st.link_button("Probar App ↗", "https://teachablemachineyose.streamlit.app/")
+
+
+# ---------------------------------------------------------
+# PESTAÑA 2: ENTREGA 2 (8 Aplicaciones Avanzadas / Visión e IoT)
+# ---------------------------------------------------------
+with tab2:
+    st.markdown("### 🚀 Entrega 2: Visión por Computador, IA y Control Ciberfísico")
+    st.write("Desarrollos de visión por computador, modelos generativos, lienzos interactivos y control ciberfísico vía MQTT con Wokwi.")
+    st.write("")
+
+    # Fila 1: Proyectos 1, 2 y 3 de la Entrega 2
+    c1, c2, c3 = st.columns(3, gap="medium")
+
+    with c1:
+        with st.container(border=True):
+            st.subheader("01. 📷 Gestos Teachable Machine")
+            img = cargar_imagen('identidad.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Clasificación de gestos en tiempo real con modelo de Keras.*")
+            st.link_button("Abrir App 🚀", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/Teachable_Machine")
+
+    with c2:
+        with st.container(border=True):
+            st.subheader("02. 🎯 Detección YOLOv5")
+            img = cargar_imagen('identificador.jpg')
+            if img:
+                st.image(img, use_container_width=True)
+            st.caption("*Reconocimiento multiclase en tiempo real con umbrales configurables.*")
+            st.link_button("Abrir App 🚀", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/YOLO")
+
+    with c3:
+        with st.container(border=True):
+            st.subheader("03. 🔐 Cerradura MQTT")
             img = cargar_imagen('cerradura.jpg')
             if img:
                 st.image(img, use_container_width=True)
-            st.caption("*Control de acceso presencial por visión computacional con transmisión de órdenes por MQTT a Wokwi.*")
-            st.link_button("Probar App ↗", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/Cerradura_Inteligente")
+            st.caption("*Acceso por presencia facial con control por MQTT a servomotor en Wokwi.*")
+            st.link_button("Abrir App 🚀", "https://clase14-tmgestosfisico-hjhmgnzhivuevwynlugvtg.streamlit.app/Cerradura_Inteligente")
+
+    # Fila 2: Proyectos 4, 5 y 6 de la Entrega 2
+    c4, c5, c6 = st.columns(3, gap="medium")
+
+    with c4:
+        with st.container(border=True):
+            st.subheader("04. ✨ Cosito Estelar / Fábula")
+            st.caption("*Lienzo de dibujo mágico para generación de historias a partir de bocetos.*")
+            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+    with c5:
+        with st.container(border=True):
+            st.subheader("05. 🔑 Key Vision")
+            st.caption("*Reconocimiento e interpretación de trazados con autenticación por API.*")
+            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+    with c6:
+        with st.container(border=True):
+            st.subheader("06. 📡 Sensor Telemetría MQTT")
+            st.caption("*Monitoreo y recepción de datos de sensores ambientales en tiempo real.*")
+            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+    # Fila 3: Proyectos 7 y 8 de la Entrega 2
+    c7, c8, c_vacía = st.columns(3, gap="medium")
+
+    with c7:
+        with st.container(border=True):
+            st.subheader("07. ⚡ Panel Control MQTT")
+            st.caption("*Emisión de comandos digitales y analógicos hacia actuadores y plataformas externas.*")
+            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+
+    with c8:
+        with st.container(border=True):
+            st.subheader("08. 🎙️ Interfaz Control por Voz")
+            st.caption("*Reconocimiento de comandos de voz para envío de señales de control.*")
+            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
 
 st.write("---")
