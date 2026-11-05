@@ -146,13 +146,13 @@ with tab1:
     with col1:
         crear_tarjeta("1. 🚀 Mi Primera App", "Prototipo base con prueba de widgets, columnas y entradas de texto.", "https://4gzh5pcun8wvb4uwagf3pb.streamlit.app/", "primerapp.jpg")
     with col2:
-        crear_tarjeta("2. 🗣️ Texto a Audio", "Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "textoaaudio.jpg")
+        crear_tarjeta("2. 🗣️ Texto a Audio", "Sintetizador de voz que convierte entradas de texto en archivos de audio reproducibles.", "https://muft7fr6sdrf56gmap3rdk.streamlit.app", "textoaaudio.jpg")
     with col3:
-        crear_tarjeta("3. 🌐 Traductor", "Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "traductor.jpg")
+        crear_tarjeta("3. 🌐 Traductor", "Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.", "https://clase7-bnkuljdihpt7zbva3lggy7.streamlit.app", "traductor.jpg")
 
     col4, col5, col6 = st.columns(3, gap="medium")
     with col4:
-        crear_tarjeta("4. 📄 OCR", "Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "ocr.jpg")
+        crear_tarjeta("4. 📄 OCR", "Reconocimiento óptico de caracteres para extraer texto a partir de imágenes y documentos.", "https://ragpdf.streamlit.app/", "ocr.jpg")
     with col5:
         crear_tarjeta("5. 🔊 OCR Audio", "Extracción de texto desde imágenes con lectura asistida por síntesis de voz.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "ocraudio.jpg")
     with col6:
