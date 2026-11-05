@@ -93,7 +93,7 @@ with st.sidebar:
     st.title("🎨 Yoselin Álvarez")
     st.caption("*Diseñadora Interactiva*")
     st.write("---")
-    st.write("¡Hola! 👋 Bienvenid@ a mi portafolio interactivo. Explora los prototipos desarrollados en la **Entrega 1** (10 aplicaciones) y la **Entrega 2** (8 aplicaciones) navegando por las pestañas superiores.")
+    st.write("¡Hola! 👋 Bienvenid@ a mi portafolio interactivo. Explora los prototipos desarrollados en la **Entrega 1** y la **Entrega 2** navegando por las pestañas superiores.")
     st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar las aplicaciones.")
 
 # --- CONTENIDO PRINCIPAL ---
@@ -102,13 +102,13 @@ st.write("Colección de herramientas y demostraciones interactivas desarrolladas
 st.write("---")
 
 # Pestañas para organizar las Entregas
-tab1, tab2 = st.tabs(["📦 Entrega 1 (10 Aplicaciones)", "🚀 Entrega 2 (8 Aplicaciones)"])
+tab1, tab2 = st.tabs(["📦 Entrega 1", "🚀 Entrega 2])
 
 # ---------------------------------------------------------
 # PESTAÑA 1: ENTREGA 1 (Las 10 apps iniciales)
 # ---------------------------------------------------------
 with tab1:
-    st.markdown("### 📦 Entrega 1: Fundamentos de PNL y Procesamiento de Texto")
+    st.markdown("### 📦 Entrega 1: Fundamentos de PNL y procesamiento de texto")
     st.write("Exploración inicial de sintetizadores de voz, traductores, reconocedores OCR, nubes de palabras, análisis de sentimiento y TF-IDF.")
     st.write("")
 
