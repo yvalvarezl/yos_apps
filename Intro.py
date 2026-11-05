@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado: Botones blancos y tarjeta rosada ajustada
+# Estilo personalizado: Pestañas en tarjeta rosa + Botones blancos
 st.markdown("""
     <style>
     /* 1. Fondo de la barra superior */
@@ -35,18 +35,35 @@ st.markdown("""
         font-weight: 500;
     }
 
-    /* 5. Estilo de las pestañas (st.tabs) */
-    button[data-baseweb="tab"] {
-        font-size: 1.1rem !important;
-        font-weight: bold !important;
-        color: #8B004B !important;
-    }
-    button[aria-selected="true"] {
-        color: #FF1493 !important;
-        border-bottom-color: #FF1493 !important;
+    /* 5. TARJETA ROSA PARA EL MENÚ DE PESTAÑAS (Entrega 1 / Entrega 2) */
+    div[data-testid="stTabs"] > div:first-child {
+        background-color: #FFB6C1 !important;
+        border: 2px solid #FF69B4 !important;
+        border-radius: 16px !important;
+        padding: 6px 16px !important;
+        box-shadow: 0 4px 10px rgba(255, 105, 180, 0.25) !important;
+        margin-bottom: 1.5rem !important;
     }
 
-    /* 6. BOTONES BLANCOS dentro de tarjetas */
+    /* Estilo de los botones dentro de las pestañas */
+    button[data-baseweb="tab"] {
+        font-size: 1.15rem !important;
+        font-weight: 800 !important;
+        color: #8B004B !important;
+        border-radius: 10px !important;
+        padding: 8px 16px !important;
+        margin-right: 8px !important;
+    }
+    
+    /* Pestaña seleccionada (activa) */
+    button[aria-selected="true"] {
+        background-color: #FFFFFF !important;
+        color: #FF1493 !important;
+        border-bottom: 3px solid #FF1493 !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    /* 6. BOTONES BLANCOS dentro de tarjetas de apps */
     .stButton>button, .stLinkButton>a {
         width: 100%;
         border-radius: 10px !important;
@@ -54,7 +71,7 @@ st.markdown("""
         color: #8B004B !important;
         border: 2px solid #FF69B4 !important;
         font-weight: bold !important;
-        margin-top: 8px !important;
+        margin-top: 6px !important;
     }
 
     .stButton>button:hover, .stLinkButton>a:hover {
@@ -70,7 +87,7 @@ st.markdown("""
         font-weight: 800 !important;
     }
 
-    /* Ocultar menú de Streamlit */
+    /* Ocultar menú predeterminado de Streamlit */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     </style>
@@ -82,33 +99,32 @@ def cargar_imagen(nombre):
         return Image.open(nombre)
     return None
 
-# Función auxiliar compacta para la tarjeta
+# Función compacta para crear cada tarjeta rosa sin margen extra
 def crear_tarjeta(titulo, desc, enlace, img_nombre=None):
     with st.container():
-        # Encabezado apretado dentro del contenedor rosa
         st.markdown(f"""
             <div style="
                 background-color: #FFB6C1;
                 border: 2px solid #FF69B4;
                 border-radius: 16px 16px 0px 0px;
                 padding: 10px 14px 4px 14px;
-                box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+                margin-bottom: 0px;
             ">
                 <h3 style="color: #8B004B; margin: 0; font-size: 1.15rem; font-weight: 800; padding: 0;">{titulo}</h3>
             </div>
         """, unsafe_allow_html=True)
         
-        # Bloque inferior integrado con la imagen y el botón
         with st.container():
             st.markdown("""
-                <style>
-                div[data-testid="stVerticalBlock"] > div:has(div.card-body) {
+                <div style="
                     background-color: #FFB6C1;
                     border: 2px solid #FF69B4;
                     border-top: none;
                     border-radius: 0px 0px 16px 16px;
-                }
-                </style>
+                    padding: 8px 14px 14px 14px;
+                    margin-bottom: 12px;
+                    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.25);
+                ">
             """, unsafe_allow_html=True)
             
             img = cargar_imagen(img_nombre) if img_nombre else None
@@ -117,6 +133,8 @@ def crear_tarjeta(titulo, desc, enlace, img_nombre=None):
                 
             st.caption(f"*{desc}*")
             st.link_button("Probar App ↗", enlace)
+            
+            st.markdown("</div>", unsafe_allow_html=True)
 
 # --- SIDEBAR / BARRA LATERAL ---
 with st.sidebar:
@@ -131,7 +149,7 @@ st.title("⚡ Portafolio de Proyectos e Inteligencia Artificial")
 st.write("Colección de herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Interfaces multimodales.")
 st.write("---")
 
-# Pestañas principales
+# Pestañas principales contenidas en la tarjeta rosa
 tab1, tab2 = st.tabs(["📦 Entrega 1", "🚀 Entrega 2"])
 
 # ---------------------------------------------------------
