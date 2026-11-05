@@ -123,7 +123,7 @@ with st.sidebar:
     st.title("🎨 Yoselin Álvarez")
     st.caption("*Diseñadora Interactiva*")
     st.write("---")
-    st.write("¡Hola! 👋 Bienvenid@ a mi portafolio interactivo. Explora los prototipos desarrollados en la **Entrega 1** (10 aplicaciones) y la **Entrega 2** (8 aplicaciones) navegando por las pestañas superiores.")
+    st.write("¡Hola! 👋 Bienvenid@ a mi portafolio interactivo. Explora los prototipos desarrollados en la **Entrega 1** y la **Entrega 2** navegando por las pestañas superiores.")
     st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar las aplicaciones.")
 
 # --- CONTENIDO PRINCIPAL ---
