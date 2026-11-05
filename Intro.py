@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilo personalizado: Rosa tierno e intenso con alta legibilidad
+# Estilo personalizado: Rosa tierno con cards en rosado más oscuro y opacidad
 st.markdown("""
     <style>
     /* 1. Fondo de la barra superior */
@@ -35,9 +35,10 @@ st.markdown("""
         font-weight: 500;
     }
 
-    /* 5. Tarjetas de proyectos */
+    /* 5. Tarjetas de proyectos (Rosado más oscuro con opacidad) */
     [data-testid="stVerticalBlockBorderWrapper"] > div {
-        background-color: #FFFFFF !important;
+        background-color: rgba(255, 182, 193, 0.45) !important;
+        backdrop-filter: blur(8px);
         border: 2px solid #FF69B4 !important;
         border-radius: 16px;
         box-shadow: 0 6px 14px rgba(255, 105, 180, 0.25);
@@ -101,7 +102,7 @@ st.title("⚡ Portafolio de Proyectos e Inteligencia Artificial")
 st.write("Colección de herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Interfaces multimodales.")
 st.write("---")
 
-# Pestañas corregidas (con comillas cerradas)
+# Pestañas principales
 tab1, tab2 = st.tabs(["📦 Entrega 1", "🚀 Entrega 2"])
 
 # ---------------------------------------------------------
@@ -216,11 +217,11 @@ with tab1:
 
 
 # ---------------------------------------------------------
-# PESTAÑA 2: ENTREGA 2 (Mismos títulos y emojis que tu compañero)
+# PESTAÑA 2: ENTREGA 2 (8 Aplicaciones con formato Entrega 1)
 # ---------------------------------------------------------
 with tab2:
     st.markdown("### 🚀 Entrega 2: Visión por Computador, IA y Control Ciberfísico")
-    st.write("Proyectos de RAG, Visión por Computador, Lienzos Generativos e IoT (8 aplicaciones).")
+    st.write("Proyectos de RAG, Visión por Computador, Lienzos Generativos e IoT.")
     st.write("")
 
     # Fila 1
@@ -228,65 +229,81 @@ with tab2:
 
     with c1:
         with st.container(border=True):
-            st.caption("*APP 01*")
             st.subheader("📈 Chat PDF")
+            img = cargar_imagen('chatpdf.jpg')
+            if img:
+                st.image(img, use_container_width=True)
             st.caption("*Análisis conversacional e interacción con documentos PDF mediante arquitectura RAG.*")
-            st.link_button("Abrir App 🚀", "https://chatpdf-guuyxeyj6opc52mohgdjhw.streamlit.app/")
+            st.link_button("Probar App ↗", "https://chatpdf-yos.streamlit.app/")
 
     with c2:
         with st.container(border=True):
-            st.caption("*APP 02*")
             st.subheader("👁️‍🗨️ App Vision")
+            img = cargar_imagen('vision.jpg')
+            if img:
+                st.image(img, use_container_width=True)
             st.caption("*Interpretación visual, auditoría multimodal y análisis de imágenes.*")
-            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
     with c3:
         with st.container(border=True):
-            st.caption("*APP 03*")
             st.subheader("✍️ Handwrite (MNIST)")
+            img = cargar_imagen('handwrite.jpg')
+            if img:
+                st.image(img, use_container_width=True)
             st.caption("*Predicción y reconocimiento de dígitos escritos a mano mediante redes neuronales.*")
-            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
     # Fila 2
     c4, c5, c6 = st.columns(3, gap="medium")
 
     with c4:
         with st.container(border=True):
-            st.caption("*APP 04*")
             st.subheader("🎨 Tablero Propio - Fábula Infantil")
+            img = cargar_imagen('fabula.jpg')
+            if img:
+                st.image(img, use_container_width=True)
             st.caption("*Generador de fábulas e historias mágicas a partir de bocetos y dibujos interactivos.*")
-            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+            st.link_button("Probar App ↗", "https://drawrecog-yos.streamlit.app/")
 
     with c5:
         with st.container(border=True):
-            st.caption("*APP 05*")
             st.subheader("🪄 Tablero API Key")
+            img = cargar_imagen('tablero_api.jpg')
+            if img:
+                st.image(img, use_container_width=True)
             st.caption("*Reconocimiento de trazos e interpretación de dibujos con autenticación de API.*")
-            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
     with c6:
         with st.container(border=True):
-            st.caption("*APP 06*")
             st.subheader("📡 Lector de Sensor MQTT")
+            img = cargar_imagen('sensor_mqtt.jpg')
+            if img:
+                st.image(img, use_container_width=True)
             st.caption("*Monitoreo y recepción de datos de telemetría de sensores en tiempo real desde ESP32 / Wokwi.*")
-            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
     # Fila 3
     c7, c8, c_vacio = st.columns(3, gap="medium")
 
     with c7:
         with st.container(border=True):
-            st.caption("*APP 07*")
             st.subheader("🕹️ Control Servomotor MQTT")
+            img = cargar_imagen('cerradura.jpg')
+            if img:
+                st.image(img, use_container_width=True)
             st.caption("*Control presencial por visión y envío de comandos por MQTT al servomotor en Wokwi.*")
-            st.link_button("Abrir App 🚀", "https://clase14-tm-gestos-fisico-main.streamlit.app/3_Cerradura_Inteligente")
+            st.link_button("Probar App ↗", "https://clase14-tm-gestos-fisico-main.streamlit.app/3_Cerradura_Inteligente")
 
     with c8:
         with st.container(border=True):
-            st.caption("*APP 08*")
             st.subheader("🎙️ Control por Voz")
+            img = cargar_imagen('control_voz.jpg')
+            if img:
+                st.image(img, use_container_width=True)
             st.caption("*Reconocimiento de comandos de voz para ejecutar acciones y enviar señales de control.*")
-            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
+            st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
 st.write("---")
 st.caption("Diseñado y desarrollado por Yoselin Álvarez © 2026 | Universidad EAFIT")
