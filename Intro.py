@@ -192,13 +192,13 @@ with tab2:
     with c5:
         crear_tarjeta("🪄 Tablero API Key", "Reconocimiento de trazos e interpretación de dibujos con autenticación de API.", "https://lienzoestelar.streamlit.app/", "tablero_api.jpg")
     with c6:
-        crear_tarjeta("📡 Lector de Sensor MQTT", "Monitoreo y recepción de datos de telemetría de sensores en tiempo real desde ESP32 / Wokwi.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "sensor_mqtt.jpg")
+        crear_tarjeta("📡 Lector de Sensor MQTT", "Monitoreo y recepción de datos de telemetría de sensores en tiempo real desde ESP32 / Wokwi.", "https://recepmqtt-2cqknwecapwgv6ovblpic5.streamlit.app/", "sensor_mqtt.jpg")
 
     c7, c8, c_vac = st.columns(3, gap="medium")
     with c7:
-        crear_tarjeta("🕹️ Control Servomotor MQTT", "Control presencial por visión y envío de comandos por MQTT al servomotor en Wokwi.", "https://recepmqtt-2cqknwecapwgv6ovblpic5.streamlit.app/", "cerradura.jpg")
+        crear_tarjeta("🕹️ Control Servomotor MQTT", "Control presencial por visión y envío de comandos por MQTT al servomotor en Wokwi.", "https://sendcmqtt-scgitb537zhrtedqbdr6gq.streamlit.app/", "cerradura.jpg")
     with c8:
-        crear_tarjeta("🎙️ Control por Voz", "Reconocimiento de comandos de voz para ejecutar acciones y enviar señales de control.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "control_voz.jpg")
+        crear_tarjeta("🎙️ Control por Voz", "Reconocimiento de comandos de voz para ejecutar acciones y enviar señales de control.", "https://ctrlvoice-yvijbccbux4an56bxmhamr.streamlit.app/", "control_voz.jpg")
 
 st.write("---")
 st.caption("Diseñado y desarrollado por Yoselin Álvarez © 2026 | Universidad EAFIT")
