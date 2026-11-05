@@ -93,7 +93,7 @@ with st.sidebar:
     st.title("🎨 Yoselin Álvarez")
     st.caption("*Diseñadora Interactiva*")
     st.write("---")
-    st.write("¡Hola! 👋 Bienvenid@ a mi portafolio interactivo. Explora los prototipos desarrollados en la **Entrega 1** y la **Entrega 2** navegando por las pestañas superiores.")
+    st.write("¡Hola! 👋 Bienvenid@ a mi portafolio interactivo. Explora los prototipos desarrollados en la **Entrega 1** (10 aplicaciones) y la **Entrega 2** (8 aplicaciones) navegando por las pestañas superiores.")
     st.info("💡 **Tip:** Haz clic en los botones de cada tarjeta para probar las aplicaciones.")
 
 # --- CONTENIDO PRINCIPAL ---
@@ -101,18 +101,18 @@ st.title("⚡ Portafolio de Proyectos e Inteligencia Artificial")
 st.write("Colección de herramientas y demostraciones interactivas desarrolladas con **Python** y **Streamlit** para la materia de Interfaces multimodales.")
 st.write("---")
 
-# Pestañas para organizar las Entregas
-tab1, tab2 = st.tabs(["📦 Entrega 1", "🚀 Entrega 2])
+# Pestañas corregidas (con comillas cerradas)
+tab1, tab2 = st.tabs(["📦 Entrega 1", "🚀 Entrega 2"])
 
 # ---------------------------------------------------------
-# PESTAÑA 1: ENTREGA 1 (Las 10 apps iniciales)
+# PESTAÑA 1: ENTREGA 1 (10 Aplicaciones)
 # ---------------------------------------------------------
 with tab1:
-    st.markdown("### 📦 Entrega 1: Fundamentos de PNL y procesamiento de texto")
+    st.markdown("### 📦 Entrega 1: Fundamentos de PNL y Procesamiento de Texto")
     st.write("Exploración inicial de sintetizadores de voz, traductores, reconocedores OCR, nubes de palabras, análisis de sentimiento y TF-IDF.")
     st.write("")
 
-    # Fila 1: Proyectos 1, 2 y 3
+    # Fila 1
     col1, col2, col3 = st.columns(3, gap="medium")
 
     with col1:
@@ -142,7 +142,7 @@ with tab1:
             st.caption("*Herramienta de traducción automática multilingüe con procesamiento de lenguaje natural.*")
             st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-    # Fila 2: Proyectos 4, 5 y 6
+    # Fila 2
     col4, col5, col6 = st.columns(3, gap="medium")
 
     with col4:
@@ -172,7 +172,7 @@ with tab1:
             st.caption("*Generador de nubes de palabras interactivas para análisis visual de frecuencias en texto.*")
             st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-    # Fila 3: Proyectos 7, 8 y 9
+    # Fila 3
     col7, col8, col9 = st.columns(3, gap="medium")
 
     with col7:
@@ -202,7 +202,7 @@ with tab1:
             st.caption("*Identificación y delimitación de elementos en imágenes en tiempo real.*")
             st.link_button("Probar App ↗", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-    # Fila 4: Proyecto 10
+    # Fila 4
     col10, col_v1, col_v2 = st.columns(3, gap="medium")
 
     with col10:
@@ -214,6 +214,7 @@ with tab1:
             st.caption("*Reconocimiento y clasificación de imágenes con modelos personalizados.*")
             st.link_button("Probar App ↗", "https://teachablemachineyose.streamlit.app/")
 
+
 # ---------------------------------------------------------
 # PESTAÑA 2: ENTREGA 2 (Mismos títulos y emojis que tu compañero)
 # ---------------------------------------------------------
@@ -222,7 +223,7 @@ with tab2:
     st.write("Proyectos de RAG, Visión por Computador, Lienzos Generativos e IoT (8 aplicaciones).")
     st.write("")
 
-    # Fila 1 (Apps 01, 02 y 03)
+    # Fila 1
     c1, c2, c3 = st.columns(3, gap="medium")
 
     with c1:
@@ -230,13 +231,13 @@ with tab2:
             st.caption("*APP 01*")
             st.subheader("📈 Chat PDF")
             st.caption("*Análisis conversacional e interacción con documentos PDF mediante arquitectura RAG.*")
-            st.link_button("Abrir App 🚀", "https://chatpdf-yos.streamlit.app/")
+            st.link_button("Abrir App 🚀", "https://chatpdf-guuyxeyj6opc52mohgdjhw.streamlit.app/")
 
     with c2:
         with st.container(border=True):
             st.caption("*APP 02*")
             st.subheader("👁️‍🗨️ App Vision")
-            st.caption("*Interpretación visual, auditoría multimodal y análisis de imágenes con GPT-4o.*")
+            st.caption("*Interpretación visual, auditoría multimodal y análisis de imágenes.*")
             st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
     with c3:
@@ -246,7 +247,7 @@ with tab2:
             st.caption("*Predicción y reconocimiento de dígitos escritos a mano mediante redes neuronales.*")
             st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-    # Fila 2 (Apps 04, 05 y 06)
+    # Fila 2
     c4, c5, c6 = st.columns(3, gap="medium")
 
     with c4:
@@ -254,7 +255,7 @@ with tab2:
             st.caption("*APP 04*")
             st.subheader("🎨 Tablero Propio - Fábula Infantil")
             st.caption("*Generador de fábulas e historias mágicas a partir de bocetos y dibujos interactivos.*")
-            st.link_button("Abrir App 🚀", "https://drawrecog-yos.streamlit.app/")
+            st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
     with c5:
         with st.container(border=True):
@@ -270,7 +271,7 @@ with tab2:
             st.caption("*Monitoreo y recepción de datos de telemetría de sensores en tiempo real desde ESP32 / Wokwi.*")
             st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
 
-    # Fila 3 (Apps 07 y 08)
+    # Fila 3
     c7, c8, c_vacio = st.columns(3, gap="medium")
 
     with c7:
@@ -278,7 +279,7 @@ with tab2:
             st.caption("*APP 07*")
             st.subheader("🕹️ Control Servomotor MQTT")
             st.caption("*Control presencial por visión y envío de comandos por MQTT al servomotor en Wokwi.*")
-            st.link_button("Abrir App 🚀", "https://clase14-tm-gestos-fisico-main.streamlit.app/")
+            st.link_button("Abrir App 🚀", "https://clase14-tm-gestos-fisico-main.streamlit.app/3_Cerradura_Inteligente")
 
     with c8:
         with st.container(border=True):
@@ -286,7 +287,6 @@ with tab2:
             st.subheader("🎙️ Control por Voz")
             st.caption("*Reconocimiento de comandos de voz para ejecutar acciones y enviar señales de control.*")
             st.link_button("Abrir App 🚀", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/")
-
 
 st.write("---")
 st.caption("Diseñado y desarrollado por Yoselin Álvarez © 2026 | Universidad EAFIT")
