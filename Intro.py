@@ -196,7 +196,7 @@ with tab2:
 
     c7, c8, c_vac = st.columns(3, gap="medium")
     with c7:
-        crear_tarjeta("🕹️ Control Servomotor MQTT", "Control presencial por visión y envío de comandos por MQTT al servomotor en Wokwi.", "https://clase14-tm-gestos-fisico-main.streamlit.app/3_Cerradura_Inteligente", "cerradura.jpg")
+        crear_tarjeta("🕹️ Control Servomotor MQTT", "Control presencial por visión y envío de comandos por MQTT al servomotor en Wokwi.", "https://recepmqtt-2cqknwecapwgv6ovblpic5.streamlit.app/", "cerradura.jpg")
     with c8:
         crear_tarjeta("🎙️ Control por Voz", "Reconocimiento de comandos de voz para ejecutar acciones y enviar señales de control.", "https://yosapps-bqstvwppbkbssmj6nvn72f.streamlit.app/", "control_voz.jpg")
 
